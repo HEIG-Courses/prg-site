@@ -1,0 +1,12 @@
+_site/
+.quarto/
+.DS_Store
+/.venv/
+**/*.quarto_ipynb
+
+/.quarto/
+docs/
+__pycache__/
+.pytest_cache/
+tools/
+.idea/

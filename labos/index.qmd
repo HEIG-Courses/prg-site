@@ -1,0 +1,28 @@
+---
+title: "Laboratoires"
+---
+
+Les laboratoires sont rendus sur [Roster]({{< var roster-url >}}). Le lien
+d'inscription à la classe {{< var classe >}} est communiqué au premier cours.
+Chaque laboratoire est ensuite une *assignment* Roster avec son énoncé, son
+dépôt Git et sa date de rendu.
+
+## Consignes
+
+- Travail par groupe de 2, sauf indication contraire dans l'énoncé.
+- Le dépôt Git de l'assignment fait foi : ce qui n'est pas poussé à l'échéance n'est pas rendu.
+- Le code doit compiler sans avertissement avec les options du modèle de projet fourni.
+- Usage de l'IA : voir les [règles du cours](../ressources/index.qmd).
+
+## Laboratoires
+
+| Labo | Sujet (prévisionnel) | Début | Rendu | Assignment |
+|---:|---|---|---|---|
+| 1 | Types, conditions et boucles (ch. 2–3) | Ve 02.10 | Di 18.10 | à venir |
+| 2 | Fonctions et récursivité (ch. 4) | Ve 30.10 | Di 15.11 | à venir |
+| 3 | Arrays, vector, string (ch. 5) | Ma 17.11 | Di 06.12 | à venir |
+| 4 | Fichiers, struct et classes (ch. 7–8) | Ve 11.12 | Di 17.01 | à venir |
+
+Les séances de laboratoire sans labo en cours sont consacrées aux
+[exercices du recueil](../exercices/index.qmd). Sujets et dates sont
+ajustés au fil du semestre, voir le [planning](../index.qmd).

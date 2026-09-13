@@ -1,0 +1,255 @@
+---
+title: "Git en pratique"
+subtitle: "Ce qu'il faut savoir pour les laboratoires"
+---
+
+## Objectifs
+
+À la fin de ce guide, vous devez être capables de :
+
+- expliquer comment Git enregistre les changements (commits, branches,
+  fusions) et résoudre un conflit ;
+- cloner le dépôt d'un laboratoire créé par Roster, y valider et pousser
+  votre travail, depuis le terminal ou depuis CLion ;
+- travailler à deux sur le même dépôt sans vous marcher dessus.
+
+## Git
+
+> Git est un système de contrôle de version distribué, libre et gratuit,
+> conçu pour gérer des projets de toute taille avec rapidité et efficacité.
+> — <https://git-scm.com/>
+
+Créé par Linus Torvalds en 2005 pour le noyau Linux, Git suit les
+modifications d'un ensemble de fichiers et coordonne le travail de
+plusieurs personnes sur le même code. C'est *le* système de contrôle de
+version aujourd'hui : vous l'utiliserez dans chaque cours et chaque emploi.
+
+### Dépôts et clones
+
+Un **dépôt** Git contient votre projet et tout son historique. Git est
+**distribué** : chaque **clone** est une copie complète du dépôt,
+historique compris. Vous pouvez travailler et valider hors ligne, puis
+synchroniser plus tard. Par convention, la copie sur GitHub s'appelle le
+**remote** (`origin`) et la copie sur votre machine est votre dépôt local.
+
+### Commits, hachages et tags
+
+Git enregistre les changements sous forme de **commits** : des instantanés
+du projet à un moment donné. Chaque commit a un **hachage** unique calculé
+à partir de son contenu ; un commit ne peut pas être modifié sans changer
+son hachage, ce qui rend l'historique fiable. Un **tag** est un nom lisible
+donné à un commit, typiquement une version (`v1.0.0`).
+
+### Les trois zones
+
+Entre votre éditeur et l'historique, il y a trois endroits :
+
+1. Le **répertoire de travail** : les fichiers que vous éditez.
+2. L'**index** (staging area) : les changements que vous avez marqués pour
+   le prochain commit (`git add`).
+3. Le **dépôt** : l'historique validé (`git commit`).
+
+`git status` montre où se trouve chaque changement, `git diff` montre ce
+qui a changé mais n'est pas encore dans l'index.
+
+### Branches
+
+Une **branche** est un pointeur mobile vers un commit ; la branche par
+défaut s'appelle `main`. Créer une branche est instantané (ce n'est qu'un
+pointeur), d'où la manière standard de développer une fonctionnalité :
+partir de `main`, valider sur la branche, fusionner quand c'est prêt.
+`HEAD` est le pointeur vers l'endroit où vous vous trouvez.
+
+### Fusion
+
+Ramener le travail d'une branche se fait de trois façons :
+
+- **Merge** : combiner les deux branches dans un *commit de fusion* (par
+  défaut).
+- **Rebase** : rejouer vos commits par-dessus la branche cible, pour un
+  historique linéaire.
+- **Squash** : réduire les commits de la branche à un seul avant de
+  fusionner.
+
+### Conflits
+
+Quand deux personnes modifient **les mêmes lignes** du même fichier, Git ne
+peut pas décider pour vous : la fusion s'arrête sur un **conflit** et
+marque le fichier :
+
+```text
+<<<<<<< HEAD
+Une ligne ajoutée par vous.
+=======
+Une ligne ajoutée par quelqu'un d'autre.
+>>>>>>> autre-branche
+```
+
+Vous résolvez en éditant le fichier (garder ce qui doit rester, supprimer
+les marqueurs), puis `git add` sur le fichier et conclusion de la fusion.
+Provoquez-en un volontairement dans un dépôt d'essai avant le premier
+rendu, ce sera moins stressant que la veille de l'échéance.
+
+### Ignorer des fichiers
+
+Un fichier `.gitignore` à la racine du dépôt liste ce que Git ne doit pas
+suivre : résultats de compilation, configuration de l'IDE. Pour un projet
+CLion et CMake :
+
+```gitignore
+# Dossiers de build de CLion et de CMake
+cmake-build-*/
+build/
+
+# Configuration locale de l'IDE
+.idea/
+```
+
+Bonne pratique : ne valider **que les sources** (`*.cpp`, `*.h`,
+`CMakeLists.txt`, `README.md`), jamais les exécutables ni les dossiers de
+build. Les dépôts créés par Roster contiennent déjà ce fichier.
+
+::: {.callout-tip collapse="true" title="Aide-mémoire Git"}
+```sh
+git clone <url>            # cloner un dépôt
+git status                 # ce qui a changé, et où
+git diff [<fichier>]       # changements non indexés
+git add <fichier>          # indexer des changements
+git commit -m "Message"    # valider les changements indexés
+git checkout -b <branche>  # créer une branche et s'y placer
+git checkout <branche>     # changer de branche
+git merge <branche>        # fusionner une branche dans la courante
+git push                   # envoyer vos commits au remote
+git pull                   # récupérer et intégrer les commits du remote
+git log                    # historique (q pour quitter)
+```
+:::
+
+## GitHub et Roster
+
+GitHub héberge les dépôts Git et ajoute la collaboration : issues, pull
+requests, revue de code. C'est aussi votre portfolio : profil et dépôts
+publics sont regardés par les recruteurs.
+
+Pour les laboratoires, [Roster]({{< var roster-url >}}) crée pour chaque
+groupe un dépôt GitHub privé dans l'organisation du cours. Le déroulement :
+
+1. Vous vous inscrivez à la classe {{< var classe >}} avec le lien
+   communiqué au premier cours.
+2. Pour chaque laboratoire, vous acceptez l'*assignment* : Roster crée le
+   dépôt (ou vous y ajoute si votre binôme l'a déjà accepté).
+3. Vous clonez le dépôt, travaillez, validez et poussez. **Ce qui est sur
+   GitHub à l'échéance est ce qui est corrigé.**
+
+::: {.callout-tip}
+Comme étudiant·e HEIG-VD, vous avez GitHub Pro gratuitement via
+[GitHub Education](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-global-campus-for-students).
+:::
+
+### Authentification SSH
+
+SSH permet de pousser et tirer sans taper de mot de passe, c'est
+l'authentification à utiliser tout le semestre.
+
+1. [Générez une clé SSH et ajoutez-la à l'agent](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+2. [Ajoutez la clé **publique** à votre compte GitHub](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+
+::: {.callout-caution}
+La clé **privée** ne quitte jamais votre machine : traitez-la comme un mot
+de passe. La clé **publique** est la seule que vous partagez.
+:::
+
+**Vérification** : `ssh -T git@github.com` vous salue par votre nom
+d'utilisateur.
+
+## Travailler à deux
+
+Votre binôme et vous avez tous deux accès en écriture au dépôt du
+laboratoire. Deux façons de travailler ; **nous recommandons la
+première**.
+
+### Une branche par personne ou par fonctionnalité
+
+Chacun travaille sur sa branche, valide, pousse, puis ouvre une **pull
+request** que l'autre relit avant de fusionner dans `main`. L'historique
+reste lisible et chacun voit ce qui entre dans `main`.
+
+### Tout le monde sur `main`, et le push refusé
+
+Certains binômes valident directement sur `main`. Tôt ou tard, vous verrez
+ceci :
+
+```text
+> git push
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/...'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally.
+```
+
+Rien n'est cassé : votre binôme a poussé sur `main` avant vous. La séquence
+de récupération :
+
+```sh
+# Une fois pour toutes : rejouer vos commits par-dessus les leurs au pull
+git config --global pull.rebase true
+
+# Intégrer leur travail, puis pousser le vôtre
+git pull
+git push
+```
+
+Si vos changements et les leurs touchent les mêmes lignes, le pull s'arrête
+sur un conflit : résolvez les fichiers marqués (voir
+[Conflits](#conflits)), puis
+
+```sh
+git add <fichier-résolu>
+git rebase --continue
+git push
+```
+
+::: {.callout-important}
+Entraînez-vous **avant** la première échéance de laboratoire : le push
+refusé arrive toujours au pire moment sinon.
+:::
+
+## Git dans CLion
+
+Tout ce qui précède est disponible dans CLion sans quitter l'IDE :
+
+- **Cloner un dépôt de laboratoire** : **File > New > Project from Version
+  Control**, collez l'URL SSH du dépôt (bouton **Code** sur GitHub, onglet
+  **SSH**).
+- **Valider** : **Git > Commit** (ou l'onglet *Commit* à gauche) montre les
+  fichiers modifiés, la différence ligne par ligne et le message.
+- **Pousser et tirer** : **Git > Push** et **Git > Pull**, aussi dans la
+  barre d'outils en haut à droite.
+- **Historique** : **Git > Show Git Log**.
+- **Conflits** : CLion ouvre un outil à trois colonnes (votre version, le
+  résultat, leur version) qui remplace l'édition des marqueurs à la main.
+
+Le terminal intégré (**View > Tool Windows > Terminal**) reste disponible
+pour les commandes de l'aide-mémoire.
+
+## Pour aller plus loin
+
+::: {.callout-note collapse="true" title="Messages de commit"}
+Il n'existe pas de convention universelle ; la constance compte plus que
+tout. Un bon défaut : un verbe à l'infinitif et une courte description
+(« Ajouter la lecture du fichier », « Corriger le calcul de la moyenne »).
+:::
+
+::: {.callout-note collapse="true" title="Apprendre Git visuellement"}
+- [Learn Git Branching](https://learngitbranching.js.org/) : exercices
+  interactifs, excellents pour branches, merges et rebases.
+- [Pro Git](https://git-scm.com/book/fr) : le livre de référence, gratuit,
+  en français.
+:::
+
+## Sources
+
+- O. Tischhauser, avec l'aide de [Claude](https://claude.com) (Anthropic).
+- [cours DAI](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+  de L. Delafontaine et H. Louis (HEIG-VD), licence
+  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).

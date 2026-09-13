@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "!docs/"
+
+website:
+  title: "PRG — Programmation procédurale"
+  page-navigation: true
+  search: true
+  sidebar:
+    style: docked
+    logo: assets/heig-vd.svg
+    contents:
+      - href: index.qmd
+        text: "Planning"
+      - href: materiel/index.qmd
+        text: "Matériel de cours"
+      - href: labos/index.qmd
+        text: "Laboratoires"
+      - href: exercices/index.qmd
+        text: "Exercices"
+      - section: "Guides"
+        contents:
+          - href: guides/installation.qmd
+            text: "Installation C++ et CLion"
+          - href: guides/git.qmd
+            text: "Git en pratique"
+      - href: ressources/index.qmd
+        text: "Ressources"
+
+format:
+  html:
+    theme: [litera, assets/prg.scss]
+    lang: fr
+    lightbox: true
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    link-external-newwindow: true

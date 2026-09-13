@@ -1,0 +1,198 @@
+---
+title: "Installation C++ et CLion"
+subtitle: "À faire avant le premier laboratoire"
+---
+
+Avant le premier laboratoire, vous installez tout ce dont le cours a
+besoin : un compilateur C++ et CMake, Git et un compte GitHub, et l'IDE
+CLion.
+
+Chaque étape se termine par une **vérification**. Si toutes les
+vérifications passent, vous êtes prêts. En cas de blocage, lisez d'abord
+les encadrés de dépannage, puis demandez-nous : nous prenons un moment au
+premier laboratoire pour les problèmes restants.
+
+::: {.callout-note}
+Temps estimé : 30 à 60 minutes.
+:::
+
+## Compilateur C++ et CMake
+
+Le cours utilise le standard **C++20**, le compilateur GCC (ou Clang sur
+macOS) et l'outil de build CMake, que CLion pilote pour vous.
+
+::: {.panel-tabset}
+
+### Windows
+
+CLion embarque une chaîne d'outils MinGW (GCC, CMake, GDB) : **rien à
+installer** en plus de CLion, voir [CLion](#clion) ci-dessous. Après
+l'installation, vérifiez dans **Settings > Build, Execution, Deployment >
+Toolchains** que la toolchain *MinGW (Bundled)* est en tête de liste et
+qu'elle détecte le compilateur, CMake et le débogueur.
+
+::: {.callout-note collapse="true" title="Alternative : WSL"}
+Si vous préférez travailler dans un vrai Linux, installez le Windows
+Subsystem for Linux (WSL) en suivant le
+[guide de Microsoft](https://learn.microsoft.com/windows/wsl/install), puis
+dans le terminal Ubuntu :
+
+```sh
+sudo apt update && sudo apt install build-essential cmake gdb git
+```
+
+Dans CLion, ajoutez ensuite une toolchain de type **WSL** (**Settings >
+Build, Execution, Deployment > Toolchains > +**) et créez vos projets dans
+votre dossier personnel Ubuntu, jamais côté Windows.
+:::
+
+### macOS
+
+Installez les outils en ligne de commande d'Apple (compilateur Clang, Git)
+puis CMake via [Homebrew](https://brew.sh) :
+
+```sh
+xcode-select --install
+brew install cmake
+```
+
+Si Homebrew n'est pas encore installé, suivez la commande unique donnée sur
+<https://brew.sh> et **exécutez les « Next steps » affichés par
+l'installateur** : ils ajoutent `brew` à votre PATH.
+
+### Linux
+
+```sh
+sudo apt update && sudo apt install build-essential cmake gdb git
+```
+
+(Sur une autre distribution qu'Ubuntu ou Debian, installez les paquets
+équivalents : `gcc`, `g++`, `cmake`, `gdb`, `git`.)
+
+:::
+
+**Vérification** : dans un terminal (macOS, Linux, WSL), `g++ --version`
+ou `clang++ --version` et `cmake --version` affichent une version. Sous
+Windows avec la toolchain embarquée, la vérification se fait dans CLion
+(voir plus bas).
+
+## Git et GitHub
+
+Git est utilisé dès la première semaine : chaque laboratoire est un dépôt
+Git créé par Roster, que vous clonez, puis dans lequel vous validez et
+poussez votre travail.
+
+::: {.panel-tabset}
+
+### Windows
+
+Installez [Git for Windows](https://git-scm.com/download/win) avec les
+options par défaut.
+
+### macOS
+
+Git est fourni par `xcode-select --install` ci-dessus. Pour une version
+plus récente : `brew install git`.
+
+### Linux / WSL
+
+Déjà installé avec la commande `apt` ci-dessus.
+
+:::
+
+Présentez-vous ensuite à Git (ces informations signent vos commits) :
+
+```sh
+git config --global user.name "Prénom Nom"
+git config --global user.email "prenom.nom@heig-vd.ch"
+```
+
+Enfin, créez un [compte GitHub](https://github.com/signup) si vous n'en
+avez pas : choisissez une adresse e-mail que vous garderez après vos études,
+ce compte devient votre portfolio.
+
+**Vérification** : `git --version` affiche une version, `git config
+user.name` affiche votre nom, et vous pouvez vous connecter sur github.com.
+
+## CLion
+
+[CLion](https://www.jetbrains.com/clion/) est l'IDE utilisé en cours et en
+laboratoire. Il est gratuit pour un usage non commercial, et la
+[licence étudiante JetBrains](https://www.jetbrains.com/community/education/#students)
+(avec votre adresse HEIG-VD) débloque tous les produits JetBrains.
+
+1. Installez l'application [JetBrains Toolbox](https://www.jetbrains.com/toolbox/app).
+2. Depuis Toolbox, installez **CLion**.
+3. Au premier lancement, connectez-vous avec votre compte JetBrains pour
+   activer la licence.
+
+### Premier projet
+
+1. **File > New Project**, type **C++ Executable**, standard de langage
+   **C++20**, emplacement dans un dossier `prg` de votre dossier personnel.
+2. CLion génère `main.cpp` et `CMakeLists.txt`. Remplacez le contenu de
+   `main.cpp` :
+
+```cpp
+#include <iostream>
+
+int main() {
+   std::cout << "Bonjour PRG" << std::endl;
+   return 0;
+}
+```
+
+3. Cliquez sur le bouton **Run** (triangle vert) : la console affiche
+   `Bonjour PRG`.
+
+Le fichier `CMakeLists.txt` décrit le projet à CMake. Trois lignes
+comptent :
+
+```cmake
+cmake_minimum_required(VERSION 3.28)   # version minimale de CMake
+project(prg)                           # nom du projet
+set(CMAKE_CXX_STANDARD 20)             # standard C++ utilisé par le cours
+add_executable(prg main.cpp)           # l'exécutable et ses fichiers source
+```
+
+Quand vous ajoutez un fichier `.cpp` au projet, il doit apparaître dans
+`add_executable` ; CLion propose de le faire pour vous.
+
+::: {.callout-tip}
+Le débogueur est votre meilleur outil : placez un point d'arrêt en cliquant
+dans la marge à gauche d'une ligne, puis lancez avec le bouton **Debug**
+(insecte vert). Le cours y revient au chapitre 1.
+:::
+
+::: {.callout-important collapse="true" title="Dépannage"}
+- **« No CMake configuration »** ou **toolchain rouge** : ouvrez
+  **Settings > Build, Execution, Deployment > Toolchains** et vérifiez que
+  compilateur, CMake et débogueur sont détectés. Sous Windows, la toolchain
+  *MinGW (Bundled)* doit être la première.
+- **Accents cassés dans la console sous Windows** : ajoutez en début de
+  `main` la ligne `system("chcp 65001");` ou réglez la console de CLion en
+  UTF-8 (**Settings > Editor > General > Console**).
+- **Chemin avec espaces ou accents** : placez vos projets dans un dossier
+  sans espace ni caractère accentué, CMake et MinGW n'aiment pas cela.
+- **Antivirus lent** : excluez le dossier de vos projets de l'analyse en
+  temps réel.
+:::
+
+## Liste de contrôle
+
+Vous êtes prêts pour le premier laboratoire quand chaque ligne passe :
+
+| Vérification | Commande / action |
+|--------------|-------------------|
+| Compilateur et CMake | `g++ --version` et `cmake --version` (ou toolchain détectée dans CLion sous Windows) |
+| Git installé et configuré | `git --version` · `git config user.name` affiche votre nom |
+| Compte GitHub | vous pouvez vous connecter sur github.com |
+| CLion | le projet « Bonjour PRG » compile et s'exécute |
+| Débogueur | un point d'arrêt dans `main` arrête l'exécution |
+
+## Sources
+
+- O. Tischhauser, avec l'aide de [Claude](https://claude.com) (Anthropic).
+- [cours DAI](https://github.com/heig-vd-dai-course/heig-vd-dai-course)
+  de L. Delafontaine et H. Louis (HEIG-VD), licence
+  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).

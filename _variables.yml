@@ -1,0 +1,11 @@
+# Valeurs propres à l'année — le SEUL fichier (avec index.qmd) qui change à
+# chaque fork semestriel. Utiliser dans les .qmd : {{< var year >}} etc.
+year: "2026-2027"
+semester: "Automne 2026"
+classe: "PRG-B"
+org: "heigvd-prg-b-26"
+org-url: "https://github.com/heigvd-prg-b-26"
+repo-url: "https://github.com/heigvd-prg-b-26/heigvd-prg-b-26.github.io"
+recueil-url: "https://github.com/HEIGVD-PRG1/PRG1_Recueil_Exercices"
+roster-url: "https://roster.y-software.ch"
+recueil-branch: "PF-26"

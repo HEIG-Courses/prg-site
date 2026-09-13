@@ -1,0 +1,21 @@
+---
+title: "Ressources"
+---
+
+## Le cours
+
+- [Fiche d'unité PRG 2026-2027](fiche_unite_PRG_2026.pdf) : objectifs, contenu, évaluation.
+- Règles du cours : à publier.
+- Utilisation responsable de l'IA : à publier.
+
+## Outils
+
+- [Installation C++ et CLion](../guides/installation.qmd)
+- [Git en pratique](../guides/git.qmd)
+- [Recueil d'exercices]({{< var recueil-url >}})
+
+## C++
+
+- [cppreference.com](https://cppreference.com) : la référence du langage et de la bibliothèque standard.
+- [Compiler Explorer](https://godbolt.org) : compiler et exécuter un extrait en ligne.
+- [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) : bonnes pratiques.
