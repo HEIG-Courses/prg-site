@@ -4,6 +4,10 @@ project:
   render:
     - "*.qmd"
     - "!docs/"
+  resources:
+    - "ressources/**"
+    - "!ressources/**/*.qmd"
+    - "slides/*.pdf"
 
 website:
   title: "PRG — Programmation procédurale"

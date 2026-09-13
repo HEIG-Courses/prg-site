@@ -5,11 +5,20 @@ title: "Ressources"
 ## Le cours
 
 - [Fiche d'unité PRG 2026-2027](fiche_unite_PRG_2026.pdf) : objectifs, contenu, évaluation.
-- [Utilisation responsable de l'IA en PRG1](https://github.com/2026-PRG1-GMB/COURS/blob/main/Complements/IA%20-%20Utilisation%20responsable%20-%20PRG1.pdf) et [directive de la direction](https://github.com/2026-PRG1-GMB/COURS/blob/main/Complements/IA%20-%20Utilisation%20responsable%20-%20direction.pdf).
+- [Utilisation responsable de l'IA en PRG1](IA%20-%20Utilisation%20responsable%20-%20PRG1.pdf).
 
 ## C++
 
-- [Référence C++ PRG1](https://github.com/2026-PRG1-GMB/COURS/blob/main/Complements/PRG1%20-%20reference%20Cpp%20-%202025-11-26.pdf) : aide-mémoire du cours.
 - [cppreference.com](https://cppreference.com) : la référence du langage et de la bibliothèque standard.
 - [Compiler Explorer](https://godbolt.org) : compiler et exécuter un extrait en ligne.
 - [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) : bonnes pratiques.
+
+## Pour aller plus loin
+
+Compléments sur Git et CLion, en plus des guides
+[Installation C++ et CLion](../guides/installation.qmd) et
+[Git en pratique](../guides/git.qmd) :
+
+- [Git : les bases](Git/git%20-%20les%20bases.pdf), [Git pour PRG1](Git/Git%20pour%20PRG1.pdf)
+- [Installation de CLion](IDE_CLion/Installation%20CLion%20-%20Fouad%20HANNA%20v1.2.pdf) (Windows)
+- Modèles : [CMakeLists.txt](IDE_CLion/CMakeLists.txt), en-tête de [fichier](IDE_CLion/entete_fichier.h) et de [fonction](IDE_CLion/entete_fonction.h)
