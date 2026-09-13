@@ -11,28 +11,31 @@ subtitle: "HEIG-VD · {{< var semester >}} · classe {{< var classe >}}"
 
 Planning prévisionnel, ajusté au fil du semestre. Les chapitres sont
 numérotés par sujet, voir le [matériel de cours](materiel/index.qmd) ;
-« (2/5) » indique la deuxième de cinq séances d'un chapitre.
+« (2/4) » indique la deuxième de quatre séances d'un chapitre.
+
+La période du 25.01 au 07.02 est réservée à la préparation et aux évaluations ([calendrier académique](https://heig-vd
+.ch/formation/calendrier-academique)).
 
 | Sem. | Lundi 10h30 (cours) | Mardi 16h30 (labo) | Mercredi 10h30 (cours) | Vendredi 10h30 (labo) | Rendus |
 |-----:|---------------------|--------------------|------------------------|-----------------------|--------|
 | 1 | 14.09 · Ch. 1 Introduction : Git, IA, IDE, débogage | 15.09 · [Installation C++ et CLion](guides/installation.qmd), [Git](guides/git.qmd), inscription Roster | 16.09 · Ch. 2 Types, références, arithmétique (1/3) | 18.09 · Exercices ch. 1–2 | Groupes de labo |
 | 2 | *Jeûne fédéral* | 22.09 · Exercices ch. 2 | 23.09 · Ch. 2 (2/3) | 25.09 · Exercices ch. 2 | |
-| 3 | 28.09 · Ch. 2 (3/3) | 29.09 · Exercices ch. 2 | 30.09 · Ch. 3 Conditions et boucles (1/4) | 02.10 · Lancement [Labo 1](labos/index.qmd) | |
+| 3 | 28.09 · Ch. 2 (3/3) | 29.09 · Exercices ch. 2–3 | 30.09 · Ch. 3 Conditions et boucles (1/4) | 02.10 · Lancement [Labo 1](labos/index.qmd) | |
 | 4 | 05.10 · Ch. 3 (2/4) | 06.10 · Labo 1 | 07.10 · Ch. 3 (3/4) | 09.10 · Labo 1 | |
-| 5 | 12.10 · Ch. 3 (4/4) | 13.10 · Labo 1 | 14.10 · Ch. 4 Fonctions, récursivité, surcharge (1/5) | 16.10 · Exercices ch. 3 | **Di 18.10** rendu Labo 1 |
+| 5 | 12.10 · Ch. 3 (4/4) | 13.10 · Labo 1 | 14.10 · Ch. 4 Fonctions, récursivité, surcharge (1/4) | 16.10 · Exercices ch. 3 | **Di 18.10** rendu Labo 1 |
 | — | *Semaine spéciale (19.10 – 23.10), travail personnel* | | | | |
-| 6 | 26.10 · Ch. 4 (2/5) | 27.10 · Exercices ch. 4 | 28.10 · Ch. 4 (3/5) | 30.10 · Lancement [Labo 2](labos/index.qmd) | |
-| 7 | 02.11 · Ch. 4 (4/5) | 03.11 · Labo 2 | 04.11 · Ch. 4 (5/5) | 06.11 · Labo 2 | |
-| 8 | 09.11 · Ch. 5 Arrays, vector, string (1/5) | 10.11 · Labo 2 · révisions ch. 1–4 | 11.11 · Ch. 5 (2/5) | 13.11 · Exercices ch. 4 · révisions | **Di 15.11** rendu Labo 2 |
-| 9 | 16.11 · **Examen intermédiaire** (ch. 1–4) | 17.11 · Lancement [Labo 3](labos/index.qmd) | 18.11 · Ch. 5 (3/5) | 20.11 · Labo 3 | |
-| 10 | 23.11 · Ch. 5 (4/5) | 24.11 · Labo 3 | 25.11 · Ch. 5 (5/5) | 27.11 · Labo 3 | |
-| 11 | 30.11 · Ch. 6 Gestion des erreurs (1/2) | 01.12 · Exercices ch. 5 | 02.12 · Ch. 6 (2/2) | 04.12 · Exercices ch. 5–6 | **Di 06.12** rendu Labo 3 |
-| 12 | 07.12 · Ch. 7 Flux et fichiers (1/3) | 08.12 · Exercices ch. 6 | 09.12 · Ch. 7 (2/3) | 11.12 · Lancement [Labo 4](labos/index.qmd) | |
-| 13 | 14.12 · Ch. 7 (3/3) | 15.12 · Labo 4 | 16.12 · Ch. 8 Enum, struct, classes, surcharge d'opérateurs (1/4) | 18.12 · Labo 4 | |
+| 6 | 26.10 · Ch. 4 (2/4) | 27.10 · Exercices ch. 4 | 28.10 · Ch. 4 (3/4) | 30.10 · Lancement [Labo 2](labos/index.qmd) | |
+| 7 | 02.11 · Ch. 4 (4/4) | 03.11 · Labo 2 | 04.11 · Ch. 5 Arrays, vector, string (1/4) | 06.11 · Labo 2 · révisions ch. 1–4 | |
+| 8 | **Semaine d'évaluation (09.11 – 13.11) : examen intermédiaire**, chapitres 1 à 4, date et horaire communiqués en cours · pas de cours ni de laboratoire | | | | **Di 15.11** rendu Labo 2 |
+| 9 | 16.11 · Ch. 5 (2/4) | 17.11 · Retour sur l'examen · exercices ch. 5 | 18.11 · Ch. 5 (3/4) | 20.11 · Lancement [Labo 3](labos/index.qmd) | |
+| 10 | 23.11 · Ch. 5 (4/4) | 24.11 · Labo 3 | 25.11 · Ch. 6 Gestion des erreurs (1/2) | 27.11 · Labo 3 | |
+| 11 | 30.11 · Ch. 6 (2/2) | 01.12 · Labo 3 | 02.12 · Ch. 7 Flux et fichiers (1/3) | 04.12 · Exercices ch. 5–6 | **Di 06.12** rendu Labo 3 |
+| 12 | 07.12 · Ch. 7 (2/3) | 08.12 · Exercices ch. 7 | 09.12 · Ch. 7 (3/3) | 11.12 · Lancement [Labo 4](labos/index.qmd) | |
+| 13 | 14.12 · Ch. 8 Enum, struct, classes, surcharge d'opérateurs (1/3) | 15.12 · Labo 4 | 16.12 · Ch. 8 (2/3) | 18.12 · Labo 4 | |
 | — | *Vacances de Noël (21.12 – 08.01)* | | | | |
-| 14 | 11.01 · Ch. 8 (2/4) | 12.01 · Labo 4 | 13.01 · Ch. 8 (3/4) | 15.01 · Exercices ch. 7–8 | **Di 17.01** rendu Labo 4 |
-| 15 | 18.01 · Ch. 8 (4/4) | 19.01 · Exercices ch. 8 | 20.01 · Ch. 9 Allocation dynamique, pointeurs (1/3) | 22.01 · Exercices ch. 8 | |
-| 16 | 25.01 · Ch. 9 (2/3) | 26.01 · Exercices ch. 9 | 27.01 · Ch. 9 (3/3) | 29.01 · Révisions et questions avant l'examen | |
+| 14 | 11.01 · Ch. 8 (3/3) | 12.01 · Labo 4 | 13.01 · Ch. 9 Allocation dynamique, pointeurs (1/3) | 15.01 · Exercices ch. 8 | **Di 17.01** rendu Labo 4 |
+| 15 | 18.01 · Ch. 9 (2/3) | 19.01 · Exercices ch. 9 | 20.01 · Ch. 9 (3/3) | 22.01 · Révisions et questions avant l'examen | |
+| — | *Préparation et évaluation (25.01 – 07.02) : examen final, date à définir | | | | |
 
 : {tbl-colwidths="[6,25,20,25,19,5]"}
 
@@ -42,5 +45,5 @@ D'après la [fiche d'unité](ressources/fiche_unite_PRG_2026.pdf) :
 
 | Note finale | |
 |---|---:|
-| Cours : examen intermédiaire (lundi 16.11, chapitres 1 à 4) × 0.4 + examen final (session d'examens) × 0.6 | 80 % |
+| Cours : examen intermédiaire × 0.4 + examen final × 0.6 | 80 % |
 | Laboratoires : moyenne des laboratoires notés (4 prévus) | 20 % |

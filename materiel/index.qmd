@@ -4,8 +4,9 @@ title: "Matériel de cours"
 
 Slides des chapitres en PDF, publiées au plus tard le jour du cours. Les
 chapitres sont numérotés par sujet, le [planning](../index.qmd) indique la
-semaine. Les périodes sont celles de la fiche d'unité (64 au total, dont 4
-pour les évaluations).
+semaine. Les périodes estimées sont celles de la
+[fiche d'unité](../ressources/fiche_unite_PRG_2026.pdf) et donnent le
+poids de chaque chapitre.
 
 | Ch. | Sujet | Périodes | Slides |
 |---:|---|---:|---|
