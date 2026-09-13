@@ -3,26 +3,11 @@ title: "Git en pratique"
 subtitle: "Ce qu'il faut savoir pour les laboratoires"
 ---
 
-## Objectifs
-
-À la fin de ce guide, vous devez être capables de :
-
-- expliquer comment Git enregistre les changements (commits, branches,
-  fusions) et résoudre un conflit ;
-- cloner le dépôt d'un laboratoire créé par Roster, y valider et pousser
-  votre travail, depuis le terminal ou depuis CLion ;
-- travailler à deux sur le même dépôt sans vous marcher dessus.
-
 ## Git
 
 > Git est un système de contrôle de version distribué, libre et gratuit,
 > conçu pour gérer des projets de toute taille avec rapidité et efficacité.
 > — <https://git-scm.com/>
-
-Créé par Linus Torvalds en 2005 pour le noyau Linux, Git suit les
-modifications d'un ensemble de fichiers et coordonne le travail de
-plusieurs personnes sur le même code. C'est *le* système de contrôle de
-version aujourd'hui : vous l'utiliserez dans chaque cours et chaque emploi.
 
 ### Dépôts et clones
 
@@ -62,14 +47,8 @@ partir de `main`, valider sur la branche, fusionner quand c'est prêt.
 
 ### Fusion
 
-Ramener le travail d'une branche se fait de trois façons :
-
-- **Merge** : combiner les deux branches dans un *commit de fusion* (par
-  défaut).
-- **Rebase** : rejouer vos commits par-dessus la branche cible, pour un
-  historique linéaire.
-- **Squash** : réduire les commits de la branche à un seul avant de
-  fusionner.
+Ramener le travail d'une branche dans `main` se fait par un **merge** : Git
+combine les deux branches dans un *commit de fusion*.
 
 ### Conflits
 
@@ -87,8 +66,6 @@ Une ligne ajoutée par quelqu'un d'autre.
 
 Vous résolvez en éditant le fichier (garder ce qui doit rester, supprimer
 les marqueurs), puis `git add` sur le fichier et conclusion de la fusion.
-Provoquez-en un volontairement dans un dépôt d'essai avant le premier
-rendu, ce sera moins stressant que la veille de l'échéance.
 
 ### Ignorer des fichiers
 
@@ -107,7 +84,7 @@ build/
 
 Bonne pratique : ne valider **que les sources** (`*.cpp`, `*.h`,
 `CMakeLists.txt`, `README.md`), jamais les exécutables ni les dossiers de
-build. Les dépôts créés par Roster contiennent déjà ce fichier.
+build.
 
 ::: {.callout-tip collapse="true" title="Aide-mémoire Git"}
 ```sh
@@ -128,23 +105,15 @@ git log                    # historique (q pour quitter)
 ## GitHub et Roster
 
 GitHub héberge les dépôts Git et ajoute la collaboration : issues, pull
-requests, revue de code. C'est aussi votre portfolio : profil et dépôts
-publics sont regardés par les recruteurs.
+requests, revue de code.
 
 Pour les laboratoires, [Roster]({{< var roster-url >}}) crée pour chaque
 groupe un dépôt GitHub privé dans l'organisation du cours. Le déroulement :
 
-1. Vous vous inscrivez à la classe {{< var classe >}} avec le lien
-   communiqué au premier cours.
-2. Pour chaque laboratoire, vous acceptez l'*assignment* : Roster crée le
+1. Pour chaque laboratoire, vous acceptez l'*assignment* : Roster crée le
    dépôt (ou vous y ajoute si votre binôme l'a déjà accepté).
-3. Vous clonez le dépôt, travaillez, validez et poussez. **Ce qui est sur
+2. Vous clonez le dépôt, travaillez, validez et poussez. **Ce qui est sur
    GitHub à l'échéance est ce qui est corrigé.**
-
-::: {.callout-tip}
-Comme étudiant·e HEIG-VD, vous avez GitHub Pro gratuitement via
-[GitHub Education](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-global-campus-for-students).
-:::
 
 ### Authentification SSH
 
@@ -233,6 +202,13 @@ Le terminal intégré (**View > Tool Windows > Terminal**) reste disponible
 pour les commandes de l'aide-mémoire.
 
 ## Pour aller plus loin
+
+::: {.callout-note collapse="true" title="Rebase et squash"}
+Deux autres façons de ramener une branche : **rebase** rejoue vos commits
+par-dessus la branche cible, pour un historique linéaire ; **squash**
+réduit les commits de la branche à un seul avant de fusionner. Vous les
+rencontrerez dans les projets des semestres suivants.
+:::
 
 ::: {.callout-note collapse="true" title="Messages de commit"}
 Il n'existe pas de convention universelle ; la constance compte plus que

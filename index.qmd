@@ -4,17 +4,13 @@ subtitle: "HEIG-VD · {{< var semester >}} · classe {{< var classe >}}"
 ---
 
 - Horaires : lundi et mercredi 10h30–12h00 (cours), salle J02 · mardi 16h30–18h00 (labo), salle C23 · vendredi 10h30–12h00 (labo), salle C33
-- Inscription aux laboratoires : [Roster]({{< var roster-url >}}), lien de classe communiqué au premier cours
-- Support : [Matériel de cours](materiel/index.qmd) · [Laboratoires](labos/index.qmd) · [Exercices](exercices/index.qmd) · [Guides](guides/installation.qmd) · [Ressources](ressources/index.qmd)
 
 ## Planning
 
-Planning prévisionnel, ajusté au fil du semestre. Les chapitres sont
-numérotés par sujet, voir le [matériel de cours](materiel/index.qmd) ;
-« (2/4) » indique la deuxième de quatre séances d'un chapitre.
-
-La période du 25.01 au 07.02 est réservée à la préparation et aux évaluations ([calendrier académique](https://heig-vd
-.ch/formation/calendrier-academique)).
+Planning prévisionnel, ajusté au fil du semestre ; « (2/4) » indique la
+deuxième de quatre séances d'un chapitre. La période du 25.01 au 07.02 est
+réservée à la préparation et aux évaluations
+([calendrier académique](https://heig-vd.ch/formation/calendrier-academique)).
 
 | Sem. | Lundi 10h30 (cours) | Mardi 16h30 (labo) | Mercredi 10h30 (cours) | Vendredi 10h30 (labo) | Rendus |
 |-----:|---------------------|--------------------|------------------------|-----------------------|--------|
@@ -25,8 +21,8 @@ La période du 25.01 au 07.02 est réservée à la préparation et aux évaluati
 | 5 | 12.10 · Ch. 3 (4/4) | 13.10 · Labo 1 | 14.10 · Ch. 4 Fonctions, récursivité, surcharge (1/4) | 16.10 · Exercices ch. 3 | **Di 18.10** rendu Labo 1 |
 | — | *Semaine spéciale (19.10 – 23.10), travail personnel* | | | | |
 | 6 | 26.10 · Ch. 4 (2/4) | 27.10 · Exercices ch. 4 | 28.10 · Ch. 4 (3/4) | 30.10 · Lancement [Labo 2](labos/index.qmd) | |
-| 7 | 02.11 · Ch. 4 (4/4) | 03.11 · Labo 2 | 04.11 · Ch. 5 Arrays, vector, string (1/4) | 06.11 · Labo 2 · révisions ch. 1–4 | |
-| 8 | **Semaine d'évaluation (09.11 – 13.11) : examen intermédiaire**, chapitres 1 à 4, date et horaire communiqués en cours · pas de cours ni de laboratoire | | | | **Di 15.11** rendu Labo 2 |
+| 7 | 02.11 · Ch. 4 (4/4) | 03.11 · Labo 2 | 04.11 · Ch. 5 Arrays, vector, string (1/4) | 06.11 · Labo 2 · révisions | |
+| 8 | **Semaine d'évaluation (09.11 – 13.11) : examen intermédiaire** | | | | **Di 15.11** rendu Labo 2 |
 | 9 | 16.11 · Ch. 5 (2/4) | 17.11 · Retour sur l'examen · exercices ch. 5 | 18.11 · Ch. 5 (3/4) | 20.11 · Lancement [Labo 3](labos/index.qmd) | |
 | 10 | 23.11 · Ch. 5 (4/4) | 24.11 · Labo 3 | 25.11 · Ch. 6 Gestion des erreurs (1/2) | 27.11 · Labo 3 | |
 | 11 | 30.11 · Ch. 6 (2/2) | 01.12 · Labo 3 | 02.12 · Ch. 7 Flux et fichiers (1/3) | 04.12 · Exercices ch. 5–6 | **Di 06.12** rendu Labo 3 |
@@ -35,7 +31,7 @@ La période du 25.01 au 07.02 est réservée à la préparation et aux évaluati
 | — | *Vacances de Noël (21.12 – 08.01)* | | | | |
 | 14 | 11.01 · Ch. 8 (3/3) | 12.01 · Labo 4 | 13.01 · Ch. 9 Allocation dynamique, pointeurs (1/3) | 15.01 · Exercices ch. 8 | **Di 17.01** rendu Labo 4 |
 | 15 | 18.01 · Ch. 9 (2/3) | 19.01 · Exercices ch. 9 | 20.01 · Ch. 9 (3/3) | 22.01 · Révisions et questions avant l'examen | |
-| — | *Préparation et évaluation (25.01 – 07.02) : examen final, date à définir | | | | |
+| — | *Préparation et évaluation (25.01 – 07.02) : examen final, date à définir* | | | | |
 
 : {tbl-colwidths="[6,25,20,25,19,5]"}
 

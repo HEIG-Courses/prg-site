@@ -7,10 +7,8 @@ Avant le premier laboratoire, vous installez tout ce dont le cours a
 besoin : un compilateur C++ et CMake, Git et un compte GitHub, et l'IDE
 CLion.
 
-Chaque étape se termine par une **vérification**. Si toutes les
-vérifications passent, vous êtes prêts. En cas de blocage, lisez d'abord
-les encadrés de dépannage, puis demandez-nous : nous prenons un moment au
-premier laboratoire pour les problèmes restants.
+Chaque étape se termine par une **vérification** ; en cas de blocage,
+demandez-nous au premier laboratoire.
 
 ::: {.callout-note}
 Temps estimé : 30 à 60 minutes.
@@ -78,9 +76,8 @@ Windows avec la toolchain embarquée, la vérification se fait dans CLion
 
 ## Git et GitHub
 
-Git est utilisé dès la première semaine : chaque laboratoire est un dépôt
-Git créé par Roster, que vous clonez, puis dans lequel vous validez et
-poussez votre travail.
+Git est utilisé dès le premier laboratoire, voir
+[Git en pratique](git.qmd).
 
 ::: {.panel-tabset}
 
@@ -108,8 +105,7 @@ git config --global user.email "prenom.nom@heig-vd.ch"
 ```
 
 Enfin, créez un [compte GitHub](https://github.com/signup) si vous n'en
-avez pas : choisissez une adresse e-mail que vous garderez après vos études,
-ce compte devient votre portfolio.
+avez pas.
 
 **Vérification** : `git --version` affiche une version, `git config
 user.name` affiche votre nom, et vous pouvez vous connecter sur github.com.
@@ -145,7 +141,7 @@ int main() {
 3. Cliquez sur le bouton **Run** (triangle vert) : la console affiche
    `Bonjour PRG`.
 
-Le fichier `CMakeLists.txt` décrit le projet à CMake. Trois lignes
+Le fichier `CMakeLists.txt` décrit le projet à CMake. Quatre lignes
 comptent :
 
 ```cmake
@@ -162,20 +158,6 @@ Quand vous ajoutez un fichier `.cpp` au projet, il doit apparaître dans
 Le débogueur est votre meilleur outil : placez un point d'arrêt en cliquant
 dans la marge à gauche d'une ligne, puis lancez avec le bouton **Debug**
 (insecte vert). Le cours y revient au chapitre 1.
-:::
-
-::: {.callout-important collapse="true" title="Dépannage"}
-- **« No CMake configuration »** ou **toolchain rouge** : ouvrez
-  **Settings > Build, Execution, Deployment > Toolchains** et vérifiez que
-  compilateur, CMake et débogueur sont détectés. Sous Windows, la toolchain
-  *MinGW (Bundled)* doit être la première.
-- **Accents cassés dans la console sous Windows** : ajoutez en début de
-  `main` la ligne `system("chcp 65001");` ou réglez la console de CLion en
-  UTF-8 (**Settings > Editor > General > Console**).
-- **Chemin avec espaces ou accents** : placez vos projets dans un dossier
-  sans espace ni caractère accentué, CMake et MinGW n'aiment pas cela.
-- **Antivirus lent** : excluez le dossier de vos projets de l'analyse en
-  temps réel.
 :::
 
 ## Liste de contrôle

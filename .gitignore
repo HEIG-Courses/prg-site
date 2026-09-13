@@ -10,3 +10,8 @@ __pycache__/
 .pytest_cache/
 tools/
 .idea/
+
+# Reveal.js decks rendered locally, not published
+slides/*.html
+slides/*_files/
+slides/images/

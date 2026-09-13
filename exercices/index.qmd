@@ -3,7 +3,7 @@ title: "Exercices"
 ---
 
 Les exercices sont dans le [recueil d'exercices PRG1]({{< var recueil-url >}}),
-dépôt public commun à toutes les classes (branche `{{< var recueil-branch >}}`). Chaque exercice est un fichier
+dépôt public commun à toutes les classes. Chaque exercice est un fichier
 Markdown avec sa solution repliée. Les chapitres sont publiés au fur et à
 mesure du semestre.
 

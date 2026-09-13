@@ -7,13 +7,6 @@ d'inscription à la classe {{< var classe >}} est communiqué au premier cours.
 Chaque laboratoire est ensuite une *assignment* Roster avec son énoncé, son
 dépôt Git et sa date de rendu.
 
-## Consignes
-
-- Travail par groupe de 2, sauf indication contraire dans l'énoncé.
-- Le dépôt Git de l'assignment fait foi : ce qui n'est pas poussé à l'échéance n'est pas rendu.
-- Le code doit compiler sans avertissement avec les options du modèle de projet fourni.
-- Usage de l'IA : voir les [règles du cours](../ressources/index.qmd).
-
 ## Laboratoires
 
 | Labo | Sujet (prévisionnel) | Début | Rendu | Assignment |

@@ -4,32 +4,20 @@ title: "Matériel de cours"
 
 Slides des chapitres en PDF, publiées au plus tard le jour du cours. Les
 chapitres sont numérotés par sujet, le [planning](../index.qmd) indique la
-semaine. Les périodes estimées sont celles de la
-[fiche d'unité](../ressources/fiche_unite_PRG_2026.pdf) et donnent le
-poids de chaque chapitre.
+semaine.
 
-| Ch. | Sujet | Périodes | Slides |
-|---:|---|---:|---|
-| 0 | Table des matières et organisation | — | [PDF](../slides/00-table-des-matieres.pdf) |
-| 1 | Introduction : Git, IA, IDE, débogage | 2 | [PDF](../slides/01-introduction-git-ia-ide-debug.pdf) |
-| 2 | Types, références, arithmétique | 6 | [PDF](../slides/02-types-references-arithmetique.pdf) |
-| 3 | Conditions et boucles | 8 | [PDF](../slides/03-conditions-et-boucles.pdf) |
-| 4 | Fonctions, récursivité, surcharge | 10 | [PDF](../slides/04-fonctions-recursivite-surcharge.pdf) |
-| 5 | Arrays, vector, string | 10 | [PDF](../slides/05-arrays-vector-string.pdf) |
-| 6 | Gestion des erreurs | 4 | [PDF](../slides/06-gestion-des-erreurs.pdf) |
-| 7 | Flux et fichiers | 6 | [PDF](../slides/07-flux-et-fichiers.pdf) |
-| 8 | Enum, struct, classes, surcharge d'opérateurs | 8 | [PDF](../slides/08-enum-struct-classes-surcharge.pdf) |
-| 9 | Allocation dynamique, pointeurs | 6 | [PDF](../slides/09-allocation-dynamique-pointeurs.pdf) |
-
-## Télécharger tout le matériel
-
-Les PDF sont dans le dossier `slides/` du [dépôt du site]({{< var repo-url >}}).
-Pour tout récupérer et suivre les mises à jour :
-
-```sh
-git clone {{< var repo-url >}}.git prg
-cd prg && git pull   # à refaire régulièrement
-```
+| Ch. | Sujet | Slides |
+|---:|---|---|
+| 0 | Table des matières et organisation | [PDF](../slides/00-table-des-matieres.pdf) |
+| 1 | Introduction : Git, IA, IDE, débogage | [PDF](../slides/01-introduction-git-ia-ide-debug.pdf) |
+| 2 | Types, références, arithmétique | [PDF](../slides/02-types-references-arithmetique.pdf) |
+| 3 | Conditions et boucles | [PDF](../slides/03-conditions-et-boucles.pdf) |
+| 4 | Fonctions, récursivité, surcharge | [PDF](../slides/04-fonctions-recursivite-surcharge.pdf) |
+| 5 | Arrays, vector, string | [PDF](../slides/05-arrays-vector-string.pdf) |
+| 6 | Gestion des erreurs | [PDF](../slides/06-gestion-des-erreurs.pdf) |
+| 7 | Flux et fichiers | [PDF](../slides/07-flux-et-fichiers.pdf) |
+| 8 | Enum, struct, classes, surcharge d'opérateurs | [PDF](../slides/08-enum-struct-classes-surcharge.pdf) |
+| 9 | Allocation dynamique, pointeurs | [PDF](../slides/09-allocation-dynamique-pointeurs.pdf) |
 
 ## Références
 
