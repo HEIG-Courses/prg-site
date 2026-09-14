@@ -11,7 +11,7 @@ Planning prévisionnel, ajusté au fil du semestre ; « (2/4) » indique la
 deuxième de quatre séances d'un chapitre. Un laboratoire par semaine,
 lancé le mardi et poursuivi le vendredi avec les exercices du recueil. La période du 25.01 au 07.02 est
 réservée à la préparation et aux évaluations
-([calendrier académique](https://heig-vd.ch/formation/calendrier-academique)).
+([calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)).
 
 | Sem. | Lundi 10h30 (cours) | Mardi 16h30 (labo) | Mercredi 10h30 (cours) | Vendredi 10h30 (labo) | Rendus |
 |-----:|---------------------|--------------------|------------------------|-----------------------|--------|
