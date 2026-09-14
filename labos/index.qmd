@@ -9,13 +9,25 @@ dépôt Git et sa date de rendu.
 
 ## Laboratoires
 
-| Labo | Sujet (prévisionnel) | Début | Rendu | Assignment |
-|---:|---|---|---|---|
-| 1 | Types, conditions et boucles (ch. 2–3) | Ve 02.10 | Di 18.10 | à venir |
-| 2 | Fonctions et récursivité (ch. 4) | Ve 30.10 | Di 15.11 | à venir |
-| 3 | Arrays, vector, string (ch. 5) | Ve 20.11 | Di 06.12 | à venir |
-| 4 | Fichiers, struct et classes (ch. 7–8) | Ve 11.12 | Di 17.01 | à venir |
+Un laboratoire par semaine, lancé le mardi et poursuivi le vendredi avec
+les [exercices du recueil](../exercices/index.qmd). Les dates de rendu sont
+indiquées dans chaque assignment.
 
-Les séances de laboratoire sans labo en cours sont consacrées aux
-[exercices du recueil](../exercices/index.qmd). Sujets et dates sont
-ajustés au fil du semestre, voir le [planning](../index.qmd).
+| Labo | Semaine | Début | Chapitres | Assignment |
+|---:|---:|---|---|---|
+| 1 | 1 | Ma 15.09 | 1–2 | à venir |
+| 2 | 2 | Ma 22.09 | 2 | à venir |
+| 3 | 3 | Ma 29.09 | 2–3 | à venir |
+| 4 | 4 | Ma 06.10 | 3 | à venir |
+| 5 | 5 | Ma 13.10 | 3–4 | à venir |
+| 6 | 6 | Ma 27.10 | 4 | à venir |
+| 7 | 7 | Ma 03.11 | 4–5 | à venir |
+| 8 | 9 | Ma 17.11 | 5 | à venir |
+| 9 | 10 | Ma 24.11 | 5–6 | à venir |
+| 10 | 11 | Ma 01.12 | 6–7 | à venir |
+| 11 | 12 | Ma 08.12 | 7 | à venir |
+| 12 | 13 | Ma 15.12 | 8 | à venir |
+| 13 | 14 | Ma 12.01 | 8–9 | à venir |
+| 14 | 15 | Ma 19.01 | 9 | à venir |
+
+Sujets et dates sont ajustés au fil du semestre, voir le [planning](../index.qmd).
