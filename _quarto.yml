@@ -10,7 +10,7 @@ project:
     - "slides/*.pdf"
 
 website:
-  title: "PRG — Programmation procédurale"
+  title: "PRG - Programmation procédurale"
   page-navigation: true
   search: true
   sidebar:

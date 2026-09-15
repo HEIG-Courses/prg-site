@@ -14,7 +14,7 @@ d'écrire un vrai programme autour.
 #include <cassert>
 
 void afficherInverse(int x) {
-   assert(x > 0 && "x doit être strictement positif");
+   assert(x > 0 && "x doit etre strictement positif");
    // ...
 }
 ```
@@ -27,7 +27,7 @@ ne change pas la condition, mais elle apparaît dans le message d'erreur.
 Le programme s'arrête et affiche la condition, le fichier et la ligne :
 
 ```text
-Assertion failed: (x > 0 && "x doit être strictement positif"), function main, file main.cpp, line 7.
+Assertion failed: (x > 0 && "x doit etre strictement positif"), function main, file main.cpp, line 7.
 ```
 
 Le texte exact varie selon le système, mais l'information est la même.
@@ -54,7 +54,7 @@ int main() {
    assert(estPair(0));
    assert(estPair(4));
    assert(!estPair(7));
-   assert(estPair(-2) && "les négatifs aussi");
+   assert(estPair(-2) && "les negatifs aussi");
    cout << "Tous les tests passent" << endl;
    return EXIT_SUCCESS;
 }
@@ -65,10 +65,9 @@ assertion fausse arrête le programme et vous dit laquelle.
 
 ## Les assertions disparaissent en Release
 
-`assert` n'existe que dans les compilations de **débogage**. Quand la
-macro `NDEBUG` est définie, ce que fait CMake pour une configuration
-**Release**, toutes les assertions sont retirées du programme. Deux
-conséquences :
+`assert` n'existe qu'en mode **Debug**. En mode **Release**, CMake définit
+la macro `NDEBUG` et toutes les assertions sont retirées du programme.
+Deux conséquences :
 
 - ne mettez jamais dans un `assert` une opération dont le programme a
   besoin, par exemple `assert(lire(fichier))` : en Release, la lecture ne

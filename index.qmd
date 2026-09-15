@@ -1,38 +1,38 @@
 ---
-title: "PRG — Programmation procédurale"
+title: "PRG - Programmation procédurale"
 subtitle: "HEIG-VD · {{< var semester >}} · classe {{< var classe >}}"
 ---
 
-- Horaires : lundi et mercredi 10h30–12h00 (cours), salle J02 · mardi 16h30–18h00 (labo), salle C23 · vendredi 10h30–12h00 (labo), salle C33
+- Horaires : lundi et mercredi 10h30-12h00 (cours), salle J02 · mardi 16h30-18h00 (labo), salle C23 · vendredi 10h30-12h00 (labo), salle C33
 
 ## Planning
 
 Planning prévisionnel, ajusté au fil du semestre ; « (2/4) » indique la
 deuxième de quatre séances d'un chapitre. Un laboratoire par semaine,
-lancé le mardi et poursuivi le vendredi avec les exercices du recueil. La période du 25.01 au 07.02 est
+lancé le mardi et continué le vendredi avec les exercices du recueil. La période du 25.01 au 07.02 est
 réservée à la préparation et aux évaluations
 ([calendrier académique](https://heig-vd.ch/formation/bachelor/calendrier-academique/)).
 
 | Sem. | Lundi 10h30 (cours) | Mardi 16h30 (labo) | Mercredi 10h30 (cours) | Vendredi 10h30 (labo) | Rendus |
 |-----:|---------------------|--------------------|------------------------|-----------------------|--------|
-| 1 | 14.09 · [Ch. 1 Introduction : Git, IA, IDE, débogage](slides/01-introduction-git-ia-ide-debug.pdf) | 15.09 · Lancement [Labo 1](labos/index.qmd) | 16.09 · Ch. 2 Types, références, arithmétique (1/3) | 18.09 · Labo 1 · exercices ch. 1–2 | **Di 20.09** rendu Labo 1 |
+| 1 | 14.09 · [Ch. 1 Introduction : Git, IA, IDE, débogage](slides/01-introduction-git-ia-ide-debug.pdf) | 15.09 · Lancement [Labo 1](labos/index.qmd) | 16.09 · Ch. 2 Types, références, arithmétique (1/3) | 18.09 · Labo 1 · exercices ch. 1-2 | **Di 20.09** rendu Labo 1 |
 | 2 | *Jeûne fédéral* | 22.09 · Lancement [Labo 2](labos/index.qmd) | 23.09 · Ch. 2 (2/3) | 25.09 · Labo 2 · exercices ch. 2 |  |
-| 3 | 28.09 · Ch. 2 (3/3) | 29.09 · Lancement [Labo 3](labos/index.qmd) | 30.09 · Ch. 3 Conditions et boucles (1/4) | 02.10 · Labo 3 · exercices ch. 2–3 |  |
+| 3 | 28.09 · Ch. 2 (3/3) | 29.09 · Lancement [Labo 3](labos/index.qmd) | 30.09 · Ch. 3 Conditions et boucles (1/4) | 02.10 · Labo 3 · exercices ch. 2-3 |  |
 | 4 | 05.10 · Ch. 3 (2/4) | 06.10 · Lancement [Labo 4](labos/index.qmd) | 07.10 · Ch. 3 (3/4) | 09.10 · Labo 4 · exercices ch. 3 |  |
-| 5 | 12.10 · Ch. 3 (4/4) | 13.10 · Lancement [Labo 5](labos/index.qmd) | 14.10 · Ch. 4 Fonctions, récursivité, surcharge (1/4) | 16.10 · Labo 5 · exercices ch. 3–4 |  |
-| — | *Semaine spéciale (19.10 – 23.10), travail personnel* | | | | |
+| 5 | 12.10 · Ch. 3 (4/4) | 13.10 · Lancement [Labo 5](labos/index.qmd) | 14.10 · Ch. 4 Fonctions, récursivité, surcharge (1/4) | 16.10 · Labo 5 · exercices ch. 3-4 |  |
+| - | *Semaine spéciale (19.10 - 23.10), travail personnel* | | | | |
 | 6 | 26.10 · Ch. 4 (2/4) | 27.10 · Lancement [Labo 6](labos/index.qmd) | 28.10 · Ch. 4 (3/4) | 30.10 · Labo 6 · exercices ch. 4 |  |
-| 7 | 02.11 · Ch. 4 (4/4) | 03.11 · Lancement [Labo 7](labos/index.qmd) | 04.11 · Ch. 5 Arrays, vector, string (1/4) | 06.11 · Labo 7 · exercices ch. 4–5 |  |
-| 8 | **Semaine d'évaluation (09.11 – 13.11) : examen intermédiaire** | | | | |
+| 7 | 02.11 · Ch. 4 (4/4) | 03.11 · Lancement [Labo 7](labos/index.qmd) | 04.11 · Ch. 5 Arrays, vector, string (1/4) | 06.11 · Labo 7 · exercices ch. 4-5 |  |
+| 8 | **Semaine d'évaluation (09.11 - 13.11) : examen intermédiaire** | | | | |
 | 9 | 16.11 · Ch. 5 (2/4) | 17.11 · Lancement [Labo 8](labos/index.qmd) | 18.11 · Ch. 5 (3/4) | 20.11 · Labo 8 · exercices ch. 5 |  |
-| 10 | 23.11 · Ch. 5 (4/4) | 24.11 · Lancement [Labo 9](labos/index.qmd) | 25.11 · Ch. 6 Gestion des erreurs (1/2) | 27.11 · Labo 9 · exercices ch. 5–6 |  |
-| 11 | 30.11 · Ch. 6 (2/2) | 01.12 · Lancement [Labo 10](labos/index.qmd) | 02.12 · Ch. 7 Flux et fichiers (1/3) | 04.12 · Labo 10 · exercices ch. 6–7 |  |
+| 10 | 23.11 · Ch. 5 (4/4) | 24.11 · Lancement [Labo 9](labos/index.qmd) | 25.11 · Ch. 6 Gestion des erreurs (1/2) | 27.11 · Labo 9 · exercices ch. 5-6 |  |
+| 11 | 30.11 · Ch. 6 (2/2) | 01.12 · Lancement [Labo 10](labos/index.qmd) | 02.12 · Ch. 7 Flux et fichiers (1/3) | 04.12 · Labo 10 · exercices ch. 6-7 |  |
 | 12 | 07.12 · Ch. 7 (2/3) | 08.12 · Lancement [Labo 11](labos/index.qmd) | 09.12 · Ch. 7 (3/3) | 11.12 · Labo 11 · exercices ch. 7 |  |
 | 13 | 14.12 · Ch. 8 Enum, struct, classes, surcharge d'opérateurs (1/3) | 15.12 · Lancement [Labo 12](labos/index.qmd) | 16.12 · Ch. 8 (2/3) | 18.12 · Labo 12 · exercices ch. 8 |  |
-| — | *Vacances de Noël (21.12 – 08.01)* | | | | |
-| 14 | 11.01 · Ch. 8 (3/3) | 12.01 · Lancement [Labo 13](labos/index.qmd) | 13.01 · Ch. 9 Allocation dynamique, pointeurs (1/3) | 15.01 · Labo 13 · exercices ch. 8–9 |  |
+| - | *Vacances de Noël (21.12 - 08.01)* | | | | |
+| 14 | 11.01 · Ch. 8 (3/3) | 12.01 · Lancement [Labo 13](labos/index.qmd) | 13.01 · Ch. 9 Allocation dynamique, pointeurs (1/3) | 15.01 · Labo 13 · exercices ch. 8-9 |  |
 | 15 | 18.01 · Ch. 9 (2/3) | 19.01 · Lancement [Labo 14](labos/index.qmd) | 20.01 · Ch. 9 (3/3) | 22.01 · Labo 14 · exercices ch. 9 · révisions |  |
-| — | *Préparation et évaluation (25.01 – 07.02) : examen final, date à définir* | | | | |
+| - | *Préparation et évaluation (25.01 - 07.02) : examen final, date à définir* | | | | |
 
 : {tbl-colwidths="[6,25,20,25,19,5]"}
 

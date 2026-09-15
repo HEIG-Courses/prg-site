@@ -23,7 +23,7 @@ macOS) et l'outil de build CMake, que CLion pilote pour vous.
 
 ### Windows
 
-CLion embarque une chaîne d'outils MinGW (GCC, CMake, GDB) : **rien à
+CLion contient déjà les outils MinGW (GCC, CMake, GDB) : **rien à
 installer pour compiler** en plus de CLion, voir [CLion](#clion)
 ci-dessous. Après l'installation de CLion, vérifiez dans **Settings >
 Build, Execution, Deployment > Toolchains** que la toolchain *MinGW
@@ -113,8 +113,8 @@ git config --global init.defaultBranch main
 git config --global pull.rebase true
 ```
 
-- `user.name` et `user.email` signent chacun de vos commits ; utilisez la
-  même adresse que sur votre compte GitHub.
+- `user.name` et `user.email` sont écrits dans chacun de vos commits ;
+  utilisez la même adresse que sur votre compte GitHub.
 - `init.defaultBranch` nomme `main` la première branche d'un dépôt que vous
   créez vous-même.
 - `pull.rebase` place vos commits après ceux de votre binôme lors d'un
@@ -149,8 +149,8 @@ SSH permet de pousser et tirer sans taper de mot de passe : c'est
 l'authentification à utiliser tout le semestre. À faire une fois par
 ordinateur.
 
-1. Générez une clé (acceptez l'emplacement proposé, une phrase de passe est
-   facultative) :
+1. Générez une clé. Appuyez sur Entrée pour accepter l'emplacement proposé ;
+   le mot de passe de la clé est facultatif :
 
    ```sh
    ssh-keygen -t ed25519 -C "prenom.nom@heig-vd.ch"

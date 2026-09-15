@@ -7,13 +7,13 @@ subtitle: "Ce qu'il faut savoir pour les laboratoires"
 
 > Git est un système de contrôle de version distribué, libre et gratuit,
 > conçu pour gérer des projets de toute taille avec rapidité et efficacité.
-> — <https://git-scm.com/>
+> (<https://git-scm.com/>)
 
 ### Dépôts et clones
 
 Un **dépôt** Git contient votre projet et tout son historique. Git est
 **distribué** : chaque **clone** est une copie complète du dépôt,
-historique compris. Vous pouvez travailler et valider hors ligne, puis
+historique compris. Vous pouvez travailler et commiter sans connexion, puis
 synchroniser plus tard. Par convention, la copie sur GitHub s'appelle le
 **remote** (`origin`) et la copie sur votre machine est votre dépôt local.
 Dans un binôme, il y a donc trois copies du dépôt. La première fois, chacun
@@ -27,12 +27,12 @@ ceux de votre binôme.
 
 ![](images/git-push-pull.svg){width="90%" fig-alt="GitHub en haut, deux ordinateurs qui poussent et tirent"}
 
-### Commits, hachages et tags
+### Commits, hash et tags
 
-Git enregistre les changements sous forme de **commits** : des instantanés
-du projet à un moment donné. Chaque commit a un **hachage** unique calculé
-à partir de son contenu ; un commit ne peut pas être modifié sans changer
-son hachage, ce qui rend l'historique fiable. Un **tag** est un nom lisible
+Git enregistre les changements sous forme de **commits** : des photos du
+projet à un moment donné. Chaque commit a un **hash** unique, calculé à
+partir de son contenu : on ne peut pas modifier un commit sans changer son
+hash, ce qui rend l'historique fiable. Un **tag** est un nom lisible
 donné à un commit, typiquement une version (`v1.0.0`).
 
 ### Les quatre zones
@@ -43,7 +43,7 @@ Entre votre éditeur et GitHub, un changement passe par quatre endroits :
 2. La **staging area** : les changements que vous avez marqués pour le
    prochain commit (`git add`). Git l'appelle aussi *index* dans ses
    messages.
-3. Le **dépôt local** : l'historique validé (`git commit`), sur votre
+3. Le **dépôt local** : les commits enregistrés (`git commit`), sur votre
    ordinateur.
 4. Le **dépôt distant** sur GitHub, qui ne reçoit vos commits qu'avec
    `git push` et dont vous récupérez ceux de votre binôme avec `git pull`.
@@ -60,8 +60,8 @@ la staging area.
 
 Une **branche** est un pointeur mobile vers un commit ; la branche par
 défaut s'appelle `main`. Créer une branche est instantané (ce n'est qu'un
-pointeur), d'où la manière standard de développer une fonctionnalité :
-partir de `main`, valider sur la branche, fusionner quand c'est prêt.
+pointeur). C'est pourquoi on développe une fonctionnalité ainsi : partir
+de `main`, commiter sur la branche, fusionner quand c'est prêt.
 `HEAD` est le pointeur vers l'endroit où vous vous trouvez.
 
 ### Fusion
@@ -87,10 +87,10 @@ Vous résolvez en éditant le fichier (garder ce qui doit rester, supprimer
 les marqueurs), puis `git add` sur le fichier, et enfin `git commit` pour
 terminer la fusion. Attention pendant un `git pull` avec `pull.rebase`
 (voir [le push refusé](#tout-le-monde-sur-main-et-le-push-refusé)) : les
-rôles sont inversés, `HEAD` est le travail publié par votre binôme et le
-bloc du dessous est votre commit en train d'être rejoué ; on termine alors
-par `git rebase --continue`. Pour tout annuler et revenir à l'état d'avant :
-`git rebase --abort`.
+rôles sont inversés. `HEAD` est le travail de votre binôme, déjà poussé ;
+le bloc du dessous est votre commit, en train d'être rejoué. On termine
+alors par `git rebase --continue`. Pour tout annuler et revenir à l'état
+d'avant : `git rebase --abort`.
 
 ### Ignorer des fichiers
 
@@ -107,7 +107,7 @@ build/
 .idea/
 ```
 
-Bonne pratique : ne valider **que les sources** (`*.cpp`, `*.h`,
+Bonne pratique : ne commiter **que les sources** (`*.cpp`, `*.h`,
 `CMakeLists.txt`, `README.md`), jamais les exécutables ni les dossiers de
 build.
 
@@ -115,12 +115,15 @@ build.
 ```sh
 git clone <url>            # cloner un dépôt
 git status                 # ce qui a changé, et où
-git diff [<fichier>]       # changements non indexés
-git add <fichier>          # indexer des changements
-git commit -m "Message"    # valider les changements indexés
+git diff [<fichier>]       # changements pas encore dans la staging area
+git add <fichier>          # ajouter à la staging area
+git commit -m "Message"    # commiter la staging area
 git checkout -b <branche>  # créer une branche et s'y placer
 git checkout <branche>     # changer de branche
 git merge <branche>        # fusionner une branche dans la courante
+git rebase main            # rejouer la branche courante après main
+git rebase --continue      # reprendre après un conflit résolu
+git rebase --abort         # annuler le rebase en cours
 git push                   # envoyer vos commits au remote
 git pull                   # récupérer et intégrer les commits du remote
 git log                    # historique (q pour quitter)
@@ -137,7 +140,7 @@ groupe un dépôt GitHub privé dans l'organisation du cours. Le déroulement :
 
 1. Pour chaque laboratoire, vous acceptez l'*assignment* : Roster crée le
    dépôt (ou vous y ajoute si votre binôme l'a déjà accepté).
-2. Vous clonez le dépôt, travaillez, validez et poussez. **Ce qui est sur
+2. Vous clonez le dépôt, travaillez, commitez et poussez. **Ce qui est sur
    GitHub à l'échéance est ce qui est corrigé.**
 
 ### Authentification SSH
@@ -152,17 +155,17 @@ d'utilisateur.
 
 ## Travailler à deux
 
-Votre binôme et vous avez tous deux accès en écriture au dépôt du
+Vous et votre binôme pouvez tous les deux écrire dans le dépôt du
 laboratoire. Deux façons de travailler ; **nous recommandons la
 première**.
 
 ### Une branche par personne ou par fonctionnalité
 
 Chacun travaille sur sa branche, puis ouvre une **pull request** (PR) :
-une demande d'intégrer la branche dans `main`, que le binôme relit avant
-de fusionner. Deux raisons : une relecture avant que le code n'entre dans
-`main`, et un historique lisible, un commit par fonctionnalité. Le
-déroulement complet :
+une demande d'intégrer la branche dans `main`. Le binôme relit le code
+avant de fusionner. Avantages : le code est relu avant d'entrer dans
+`main`, et l'historique reste lisible, avec un commit par fonctionnalité.
+Le déroulement complet :
 
 1. Créer la branche et s'y placer. Le nom doit décrire ce que la branche
    apporte (fonctionnalité principale), par exemple `resolution-ex-1` :
@@ -171,7 +174,7 @@ déroulement complet :
    git checkout -b <nom-de-branche>
    ```
 
-2. Travailler, puis valider comme d'habitude :
+2. Travailler, puis commiter comme d'habitude :
 
    ```sh
    git add main.cpp
@@ -209,7 +212,7 @@ déroulement complet :
    `main`, historique facile à lire. Choisissez-le, gardez ou corrigez le
    message proposé, confirmez.
 
-8. Cliquez **Delete branch** : la branche a rempli son rôle.
+8. Cliquez **Delete branch** : vous n'avez plus besoin de la branche.
 
 9. De retour dans le terminal, mettez `main` à jour :
 
@@ -225,7 +228,7 @@ Push** propose de créer la branche distante et affiche ensuite un lien
 
 ### Tout le monde sur `main`, et le push refusé
 
-Certains binômes valident directement sur `main`. Tôt ou tard, vous verrez
+Certains binômes commitent directement sur `main`. Tôt ou tard, vous verrez
 ceci :
 
 ```text
@@ -236,14 +239,14 @@ hint: Updates were rejected because the remote contains work that you do
 hint: not have locally.
 ```
 
-Rien n'est cassé : votre binôme a poussé sur `main` avant vous, et les deux
-copies ont divergé.
+Rien n'est cassé : votre binôme a poussé sur `main` avant vous, et votre
+copie de `main` n'est plus à jour.
 
 ![](images/git-divergence.svg){width="100%" fig-alt="Deux commits issus du même parent : celui du binôme sur origin/main, le vôtre sur main"}
 
-La séquence de récupération, grâce au réglage `pull.rebase` du
-[guide d'installation](installation.qmd#configuration-de-git), qui rejoue
-vos commits par-dessus les leurs :
+Pour vous en sortir, grâce au réglage `pull.rebase` du
+[guide d'installation](installation.qmd#configuration-de-git), qui place
+vos commits après les leurs :
 
 ```sh
 git pull
@@ -279,7 +282,7 @@ Tout ce qui précède est disponible dans CLion sans quitter l'IDE :
   5. choisissez la cible dans la liste de lancement et cliquez **Run**.
 
   L'équivalent en ligne de commande : `git clone git@github.com:<org>/<depot>.git`.
-- **Valider** : **Git > Commit** (ou l'onglet *Commit* à gauche) montre les
+- **Commiter** : **Git > Commit** (ou l'onglet *Commit* à gauche) montre les
   fichiers modifiés, la différence ligne par ligne et le message.
 - **Pousser et tirer** : **Git > Push** et **Git > Pull**, aussi dans la
   barre d'outils en haut à droite.
@@ -322,8 +325,8 @@ git merge <nom-de-branche>
 
 **Rebase** : depuis sa branche, on rejoue ses commits par-dessus `main`.
 Le rebase ne déplace pas `main` : il faut encore, depuis `main`, ramener
-la branche ; comme elle est maintenant dans le prolongement de `main`,
-`main` avance simplement jusqu'à elle, sans commit de fusion.
+la branche ; comme elle commence maintenant juste après `main`, `main`
+avance simplement jusqu'à elle, sans commit de fusion.
 
 ```sh
 git checkout <nom-de-branche>
@@ -333,7 +336,7 @@ git merge <nom-de-branche>
 ```
 
 **Squash** : depuis `main`, on ramène tous les commits de la branche en un
-seul, qu'il reste à valider.
+seul, qu'il reste à commiter.
 
 ```sh
 git checkout main
@@ -343,8 +346,8 @@ git commit -m "<ce que la branche apporte>"
 :::
 
 ::: {.callout-note collapse="true" title="Messages de commit"}
-Il n'existe pas de convention universelle ; la constance compte plus que
-tout. Un bon défaut : un verbe à l'infinitif et une courte description
+Il n'existe pas de règle universelle ; l'important est de toujours faire
+pareil. Une bonne habitude : un verbe à l'infinitif et une courte description
 (« Ajouter la lecture du fichier », « Corriger le calcul de la moyenne »).
 :::
 

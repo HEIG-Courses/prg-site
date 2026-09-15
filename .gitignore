@@ -15,3 +15,7 @@ tools/
 slides/*.html
 slides/*_files/
 slides/images/
+
+# Build output rendered outside _site (preview from a subfolder, IDE plugin)
+site_libs/
+*.html
