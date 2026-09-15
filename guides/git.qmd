@@ -145,28 +145,30 @@ de fusionner. Deux raisons : une relecture avant que le code n'entre dans
 `main`, et un historique lisible, un commit par fonctionnalité. Le
 déroulement complet :
 
-1. Créer la branche et s'y placer :
+1. Créer la branche et s'y placer. Le nom doit décrire ce que la branche
+   apporte (fonctionnalité principale), par exemple `resolution-ex-1` :
 
    ```sh
-   git checkout -b saisie-nom
+   git checkout -b <nom-de-branche>
    ```
 
 2. Travailler, puis valider comme d'habitude :
 
    ```sh
    git add main.cpp
-   git commit -m "Ajouter la saisie du nom"
+   git commit -m "<ce que le commit apporte>"
    ```
 
 3. Pousser la branche en la liant au remote (`-u`, la première fois
    seulement) :
 
    ```sh
-   git push -u origin saisie-nom
+   git push -u origin <nom-de-branche>
    ```
 
 4. Sur GitHub, un bandeau **Compare & pull request** apparaît sur la page
-   du dépôt. Cliquez, donnez un titre et une description en trois lignes :
+   du dépôt. Cliquez, donnez un titre et une description en trois lignes,
+   par exemple :
 
    ```text
    Quoi : saisie du nom et affichage du message de bienvenue
@@ -199,8 +201,8 @@ déroulement complet :
 
 Dans CLion : **Git > New Branch** crée la branche et s'y place ; **Git >
 Push** propose de créer la branche distante et affiche ensuite un lien
-**Create Pull Request** ; le reste se passe sur GitHub. Rebase et squash
-sont décrits dans [Pour aller plus loin](#rebase-squash).
+**Create Pull Request** ; le reste se passe sur GitHub. Les commandes
+équivalentes sont dans [Pour aller plus loin](#rebase-squash).
 
 ### Tout le monde sur `main`, et le push refusé
 
@@ -273,10 +275,39 @@ pour les commandes de l'aide-mémoire.
 
 ## Pour aller plus loin
 
-::: {#rebase-squash .callout-note collapse="true" title="Rebase et squash"}
-Deux autres façons de ramener une branche : **rebase** rejoue vos commits
-par-dessus la branche cible, pour un historique linéaire ; **squash**
-réduit les commits de la branche à un seul avant de fusionner.
+::: {#rebase-squash .callout-note collapse="true" title="Merge, rebase et squash en ligne de commande"}
+Sur GitHub, les trois méthodes sont des boutons. En ligne de commande,
+tout dépend de la branche sur laquelle on se trouve : la commande agit
+sur la branche courante.
+
+**Merge** : depuis `main`, on ramène la branche ; Git crée un commit de
+fusion.
+
+```sh
+git checkout main
+git merge <nom-de-branche>
+```
+
+**Rebase** : depuis sa branche, on rejoue ses commits par-dessus `main`.
+Le rebase ne déplace pas `main` : il faut encore, depuis `main`, ramener
+la branche ; comme elle est maintenant dans le prolongement de `main`,
+`main` avance simplement jusqu'à elle, sans commit de fusion.
+
+```sh
+git checkout <nom-de-branche>
+git rebase main
+git checkout main
+git merge <nom-de-branche>
+```
+
+**Squash** : depuis `main`, on ramène tous les commits de la branche en un
+seul, qu'il reste à valider.
+
+```sh
+git checkout main
+git merge --squash <nom-de-branche>
+git commit -m "<ce que la branche apporte>"
+```
 :::
 
 ::: {.callout-note collapse="true" title="Messages de commit"}
