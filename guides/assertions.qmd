@@ -1,0 +1,80 @@
+---
+title: "Assertions et premiers tests"
+subtitle: "Vérifier son code avec assert"
+---
+
+Une **assertion** est une condition qui doit être vraie à cet endroit du
+programme. Si elle est fausse, le programme s'arrête immédiatement en
+indiquant où. C'est le moyen le plus simple de tester une fonction avant
+d'écrire un vrai programme autour.
+
+## Écrire une assertion
+
+```cpp
+#include <cassert>
+
+void afficherInverse(int x) {
+   assert(x > 0 && "x doit être strictement positif");
+   // ...
+}
+```
+
+Le `&& "message"` est une astuce : la chaîne est toujours vraie, donc elle
+ne change pas la condition, mais elle apparaît dans le message d'erreur.
+
+## Ce qui se passe en cas d'échec
+
+Le programme s'arrête et affiche la condition, le fichier et la ligne :
+
+```text
+Assertion failed: (x > 0 && "x doit être strictement positif"), function main, file main.cpp, line 7.
+```
+
+Le texte exact varie selon le système, mais l'information est la même.
+Dans CLion, lancez le programme avec **Debug** : l'exécution s'arrête sur
+l'assertion et vous voyez les valeurs des variables.
+
+## Un programme de test minimal
+
+Une fonction, puis un `main` qui l'appelle sur quelques cas choisis, dont
+les cas limites :
+
+```cpp
+#include <cassert>
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+bool estPair(int n) {
+   return n % 2 == 0;
+}
+
+int main() {
+   assert(estPair(0));
+   assert(estPair(4));
+   assert(!estPair(7));
+   assert(estPair(-2) && "les négatifs aussi");
+   cout << "Tous les tests passent" << endl;
+   return EXIT_SUCCESS;
+}
+```
+
+Si tout passe, le programme affiche la dernière ligne. Sinon, la première
+assertion fausse arrête le programme et vous dit laquelle.
+
+## Les assertions disparaissent en Release
+
+`assert` n'existe que dans les compilations de **débogage**. Quand la
+macro `NDEBUG` est définie, ce que fait CMake pour une configuration
+**Release**, toutes les assertions sont retirées du programme. Deux
+conséquences :
+
+- ne mettez jamais dans un `assert` une opération dont le programme a
+  besoin, par exemple `assert(lire(fichier))` : en Release, la lecture ne
+  serait plus faite ;
+- une assertion vérifie une hypothèse du programmeur, pas une saisie de
+  l'utilisateur ; une saisie invalide se traite avec un `if`.
+
+Dans CLion, la configuration par défaut est **Debug** : vos assertions
+sont actives.

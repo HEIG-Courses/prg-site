@@ -9,16 +9,16 @@ mesure du semestre.
 
 | Ch. | Chapitre du recueil |
 |---:|---|
-| 1 | [Introduction, Git, IA, IDE, debug]({{< var recueil-url >}}/tree/{{< var recueil-branch >}}/01%20-%20Introduction%20Git%20IA%20IDE%20debug%20-%20PF26) |
-| 2 | [Types, références, arithmétique]({{< var recueil-url >}}/tree/{{< var recueil-branch >}}/02%20-%20Types%20references%20arithmetique%20-%20PF26) |
-| 3 | [Conditions et boucles]({{< var recueil-url >}}/tree/{{< var recueil-branch >}}/03%20-%20Conditions%20et%20boucles%20-%20PF26) |
-| 4 | [Fonctions, récursivité, surcharge]({{< var recueil-url >}}/tree/{{< var recueil-branch >}}/04%20-%20Fonctions%20recursivite%20surcharge%20-%20PF26) |
-| 5 | [Arrays, vector, string]({{< var recueil-url >}}/tree/{{< var recueil-branch >}}/05%20-%20Arrays%20vector%20string%20-%20PF26) |
-| 6 | [Gestion des erreurs]({{< var recueil-url >}}/tree/{{< var recueil-branch >}}/06%20-%20Gestion%20des%20erreurs%20-%20PF26) |
-| 7 | [Flux et fichiers]({{< var recueil-url >}}/tree/{{< var recueil-branch >}}/07%20-%20Flux%20et%20fichiers%20-%20PF26) |
-| 8 | [Enum, struct, classes, surcharge]({{< var recueil-url >}}/tree/{{< var recueil-branch >}}/08%20-%20Enum%20struct%20classes%20surcharge%20-%20PF26) |
-| 9 | [Allocation dynamique, pointeurs]({{< var recueil-url >}}/tree/{{< var recueil-branch >}}/09%20-%20Allocation%20dynamique%20pointeurs%20-%20PF26) |
-| 99 | [Exercices récapitulatifs]({{< var recueil-url >}}/tree/{{< var recueil-branch >}}/99%20-%20Exercices%20r%C3%A9capitulatifs) |
+| 1 | [Introduction, Git, IA, IDE, debug]({{< var recueil-url >}}/tree/main/01%20-%20Introduction%20Git%20IA%20IDE%20debug) |
+| 2 | [Types, références, arithmétique]({{< var recueil-url >}}/tree/main/02%20-%20Types%20references%20arithmetique) |
+| 3 | [Conditions et boucles]({{< var recueil-url >}}/tree/main/03%20-%20Conditions%20et%20boucles) |
+| 4 | [Fonctions, récursivité, surcharge]({{< var recueil-url >}}/tree/main/04%20-%20Fonctions%20recursivite%20surcharge) |
+| 5 | [Arrays, vector, string]({{< var recueil-url >}}/tree/main/05%20-%20Arrays%20vector%20string) |
+| 6 | [Gestion des erreurs]({{< var recueil-url >}}/tree/main/06%20-%20Gestion%20des%20erreurs) |
+| 7 | [Flux et fichiers]({{< var recueil-url >}}/tree/main/07%20-%20Flux%20et%20fichiers) |
+| 8 | [Enum, struct, classes, surcharge]({{< var recueil-url >}}/tree/main/08%20-%20Enum%20struct%20classes%20surcharge) |
+| 9 | [Allocation dynamique, pointeurs]({{< var recueil-url >}}/tree/main/09%20-%20Allocation%20dynamique%20pointeurs) |
+| 99 | [Exercices récapitulatifs]({{< var recueil-url >}}/tree/main/99%20-%20Exercices%20r%C3%A9capitulatifs) |
 
 Pour tout récupérer localement :
 

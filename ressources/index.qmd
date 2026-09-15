@@ -21,4 +21,61 @@ Compléments sur Git et CLion, en plus des guides
 
 - [Git : les bases](Git/git%20-%20les%20bases.pdf), [Git pour PRG1](Git/Git%20pour%20PRG1.pdf)
 - [Installation de CLion](IDE_CLion/Installation%20CLion%20-%20Fouad%20HANNA%20v1.2.pdf) (Windows)
-- Modèles : [CMakeLists.txt](IDE_CLion/CMakeLists.txt), en-tête de [fichier](IDE_CLion/entete_fichier.h) et de [fonction](IDE_CLion/entete_fonction.h)
+- Modèle de projet : [CMakeLists.txt](IDE_CLion/CMakeLists.txt), reproduit ci-dessous avec les en-têtes.
+
+## Modèles
+
+Le bouton en haut à droite de chaque bloc copie son contenu.
+
+### CMakeLists.txt
+
+```cmake
+# Modèle de CMakeLists.txt pour un projet PRG
+cmake_minimum_required(VERSION 3.28)
+project(mon_projet CXX)                 # nom du projet, à adapter
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+# Avertissements du compilateur
+if(MSVC)
+    add_compile_options(/W4)
+else()
+    add_compile_options(-Wall -Wextra -Wpedantic -Wconversion)
+endif()
+
+# Un fichier source par ligne ; CLion propose de les ajouter ici.
+add_executable(${PROJECT_NAME}
+        main.cpp
+)
+```
+
+### En-tête de fichier
+
+```cpp
+// Fichier     nom du fichier (.h / .cpp)
+// Auteur
+// Date        ...
+//
+// But         description détaillée du projet
+//
+// Remarque
+//
+// Modifs      Date / Auteur / Raison
+//
+// Compilateur
+```
+
+### En-tête de fonction
+
+```cpp
+// nom         saisie
+// but         fonction de saisie
+//             la saisie est controllée
+// param       MSG_INVITE  message d'invite
+// param       MIN         intervalle de saisie, valeur min comprise
+// param       MAX         intervalle de saisie, valeur max comprise
+// return      valeur saisie
+// exception   n/a
+```

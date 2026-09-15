@@ -65,7 +65,13 @@ Une ligne ajoutée par quelqu'un d'autre.
 ```
 
 Vous résolvez en éditant le fichier (garder ce qui doit rester, supprimer
-les marqueurs), puis `git add` sur le fichier et conclusion de la fusion.
+les marqueurs), puis `git add` sur le fichier, et enfin `git commit` pour
+terminer la fusion. Attention pendant un `git pull` avec `pull.rebase`
+(voir [le push refusé](#tout-le-monde-sur-main-et-le-push-refusé)) : les
+rôles sont inversés, `HEAD` est le travail publié par votre binôme et le
+bloc du dessous est votre commit en train d'être rejoué ; on termine alors
+par `git rebase --continue`. Pour tout annuler et revenir à l'état d'avant :
+`git rebase --abort`.
 
 ### Ignorer des fichiers
 
@@ -118,15 +124,9 @@ groupe un dépôt GitHub privé dans l'organisation du cours. Le déroulement :
 ### Authentification SSH
 
 SSH permet de pousser et tirer sans taper de mot de passe, c'est
-l'authentification à utiliser tout le semestre.
-
-1. [Générez une clé SSH et ajoutez-la à l'agent](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
-2. [Ajoutez la clé **publique** à votre compte GitHub](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
-
-::: {.callout-caution}
-La clé **privée** ne quitte jamais votre machine : traitez-la comme un mot
-de passe. La clé **publique** est la seule que vous partagez.
-:::
+l'authentification à utiliser tout le semestre. La mise en place est
+décrite dans le guide d'installation, section
+[Authentification SSH](installation.qmd#authentification-ssh).
 
 **Vérification** : `ssh -T git@github.com` vous salue par votre nom
 d'utilisateur.
@@ -139,9 +139,68 @@ première**.
 
 ### Une branche par personne ou par fonctionnalité
 
-Chacun travaille sur sa branche, valide, pousse, puis ouvre une **pull
-request** que l'autre relit avant de fusionner dans `main`. L'historique
-reste lisible et chacun voit ce qui entre dans `main`.
+Chacun travaille sur sa branche, puis ouvre une **pull request** (PR) :
+une demande d'intégrer la branche dans `main`, que le binôme relit avant
+de fusionner. Deux raisons : une relecture avant que le code n'entre dans
+`main`, et un historique lisible, un commit par fonctionnalité. Le
+déroulement complet :
+
+1. Créer la branche et s'y placer :
+
+   ```sh
+   git checkout -b saisie-nom
+   ```
+
+2. Travailler, puis valider comme d'habitude :
+
+   ```sh
+   git add main.cpp
+   git commit -m "Ajouter la saisie du nom"
+   ```
+
+3. Pousser la branche en la liant au remote (`-u`, la première fois
+   seulement) :
+
+   ```sh
+   git push -u origin saisie-nom
+   ```
+
+4. Sur GitHub, un bandeau **Compare & pull request** apparaît sur la page
+   du dépôt. Cliquez, donnez un titre et une description en trois lignes :
+
+   ```text
+   Quoi : saisie du nom et affichage du message de bienvenue
+   Pourquoi : première étape du programme de présentation
+   À vérifier : le nom avec espaces est bien lu en entier
+   ```
+
+5. Dans **Reviewers**, choisissez votre binôme, puis **Create pull
+   request**.
+
+6. Le binôme ouvre l'onglet **Files changed**, lit le code, commente si
+   besoin, puis **Review changes > Approve > Submit review**.
+
+7. Fusion : le bouton vert propose trois méthodes dans son menu. **Create
+   a merge commit** garde tous les commits de la branche, **Rebase and
+   merge** les rejoue un à un sur `main`, **Squash and merge** les réunit
+   en un seul commit. Le cours
+   utilise **Squash and merge** : un commit par fonctionnalité dans
+   `main`, historique facile à lire. Choisissez-le, gardez ou corrigez le
+   message proposé, confirmez.
+
+8. Cliquez **Delete branch** : la branche a rempli son rôle.
+
+9. De retour dans le terminal, mettez `main` à jour :
+
+   ```sh
+   git checkout main
+   git pull
+   ```
+
+Dans CLion : **Git > New Branch** crée la branche et s'y place ; **Git >
+Push** propose de créer la branche distante et affiche ensuite un lien
+**Create Pull Request** ; le reste se passe sur GitHub. Rebase et squash
+sont décrits dans [Pour aller plus loin](#rebase-squash).
 
 ### Tout le monde sur `main`, et le push refusé
 
@@ -187,27 +246,37 @@ refusé arrive toujours au pire moment sinon.
 
 Tout ce qui précède est disponible dans CLion sans quitter l'IDE :
 
-- **Cloner un dépôt de laboratoire** : **File > New > Project from Version
-  Control**, collez l'URL SSH du dépôt (bouton **Code** sur GitHub, onglet
-  **SSH**).
+- **Cloner un dépôt de laboratoire**, dans l'ordre :
+  1. acceptez l'*assignment* sur Roster, qui vous mène au dépôt GitHub ;
+  2. sur GitHub, bouton **Code**, onglet **SSH**, copiez l'URL ;
+  3. dans CLion, **File > New > Project from Version Control**, collez
+     l'URL, choisissez le dossier, **Clone** ;
+  4. répondez **Trust Project** ; CLion charge le `CMakeLists.txt` (bandeau
+     *Reload CMake project* si besoin) ;
+  5. choisissez la cible dans la liste de lancement et cliquez **Run**.
+
+  L'équivalent en ligne de commande : `git clone git@github.com:<org>/<depot>.git`.
 - **Valider** : **Git > Commit** (ou l'onglet *Commit* à gauche) montre les
   fichiers modifiés, la différence ligne par ligne et le message.
 - **Pousser et tirer** : **Git > Push** et **Git > Pull**, aussi dans la
   barre d'outils en haut à droite.
 - **Historique** : **Git > Show Git Log**.
-- **Conflits** : CLion ouvre un outil à trois colonnes (votre version, le
-  résultat, leur version) qui remplace l'édition des marqueurs à la main.
+- **Conflits** : après un **Pull**, CLion liste les fichiers en conflit
+  dans une fenêtre *Conflicts*. **Accept Yours** ou **Accept Theirs** y
+  prennent un côté en bloc ; **Merge** ouvre un outil à trois colonnes
+  (votre version, le résultat, leur version) où les flèches insèrent un
+  changement à la fois dans la colonne centrale, puis **Apply** enregistre
+  et **Abort** annule.
 
 Le terminal intégré (**View > Tool Windows > Terminal**) reste disponible
 pour les commandes de l'aide-mémoire.
 
 ## Pour aller plus loin
 
-::: {.callout-note collapse="true" title="Rebase et squash"}
+::: {#rebase-squash .callout-note collapse="true" title="Rebase et squash"}
 Deux autres façons de ramener une branche : **rebase** rejoue vos commits
 par-dessus la branche cible, pour un historique linéaire ; **squash**
-réduit les commits de la branche à un seul avant de fusionner. Vous les
-rencontrerez dans les projets des semestres suivants.
+réduit les commits de la branche à un seul avant de fusionner.
 :::
 
 ::: {.callout-note collapse="true" title="Messages de commit"}

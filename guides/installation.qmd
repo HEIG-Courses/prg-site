@@ -24,10 +24,13 @@ macOS) et l'outil de build CMake, que CLion pilote pour vous.
 ### Windows
 
 CLion embarque une chaîne d'outils MinGW (GCC, CMake, GDB) : **rien à
-installer** en plus de CLion, voir [CLion](#clion) ci-dessous. Après
-l'installation, vérifiez dans **Settings > Build, Execution, Deployment >
-Toolchains** que la toolchain *MinGW (Bundled)* est en tête de liste et
-qu'elle détecte le compilateur, CMake et le débogueur.
+installer pour compiler** en plus de CLion, voir [CLion](#clion)
+ci-dessous. Après l'installation de CLion, vérifiez dans **Settings >
+Build, Execution, Deployment > Toolchains** que la toolchain *MinGW
+(Bundled)* est en tête de liste et qu'elle détecte le compilateur, CMake
+et le débogueur. Git reste à installer, voir [Git et GitHub](#git-et-github) :
+ses commandes se tapent dans **Git Bash** (installé avec Git for Windows)
+ou dans le terminal intégré de CLion.
 
 ::: {.callout-note collapse="true" title="Alternative : WSL"}
 Si vous préférez travailler dans un vrai Linux, installez le Windows
@@ -110,6 +113,50 @@ avez pas.
 **Vérification** : `git --version` affiche une version, `git config
 user.name` affiche votre nom, et vous pouvez vous connecter sur github.com.
 
+## Authentification SSH
+
+SSH permet de pousser et tirer sans taper de mot de passe : c'est
+l'authentification à utiliser tout le semestre. À faire une fois par
+ordinateur.
+
+1. Générez une clé (acceptez l'emplacement proposé, une phrase de passe est
+   facultative) :
+
+   ```sh
+   ssh-keygen -t ed25519 -C "prenom.nom@heig-vd.ch"
+   ```
+
+   La clé privée est dans `~/.ssh/id_ed25519`, la clé publique dans
+   `~/.ssh/id_ed25519.pub`. Sous Windows, la commande se tape dans Git
+   Bash, où `~` désigne `C:\Users\<vous>`, affiché `/c/Users/<vous>`.
+
+2. Copiez le contenu de la clé **publique** dans le presse-papier :
+
+   ```sh
+   cat ~/.ssh/id_ed25519.pub | pbcopy   # macOS
+   cat ~/.ssh/id_ed25519.pub | clip     # Windows, Git Bash
+   cat ~/.ssh/id_ed25519.pub            # Linux : sélectionner et copier
+   ```
+
+3. Sur GitHub : photo de profil, **Settings > SSH and GPG keys > New SSH
+   key**, un titre (« portable HEIG »), collez la clé, **Add SSH key**.
+
+::: {.callout-caution}
+La clé **privée** ne quitte jamais votre machine : traitez-la comme un mot
+de passe. La clé **publique** est la seule que vous partagez.
+:::
+
+**Vérification** : `ssh -T git@github.com`. À la première connexion, une
+question sur l'authenticité du serveur s'affiche, répondez `yes`. La
+réponse attendue est :
+
+```text
+Hi <votre-nom-d-utilisateur>! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+Ce n'est pas une erreur : GitHub confirme votre identité et rappelle qu'il
+n'offre pas de terminal.
+
 ## CLion
 
 [CLion](https://www.jetbrains.com/clion/) est l'IDE utilisé en cours et en
@@ -130,26 +177,40 @@ laboratoire. Il est gratuit pour un usage non commercial, et la
    `main.cpp` :
 
 ```cpp
+#include <cstdlib>
 #include <iostream>
 
+using namespace std;
+
 int main() {
-   std::cout << "Bonjour PRG" << std::endl;
-   return 0;
+   cout << "Bonjour PRG" << endl;
+   return EXIT_SUCCESS;
 }
 ```
 
 3. Cliquez sur le bouton **Run** (triangle vert) : la console affiche
    `Bonjour PRG`.
 
-Le fichier `CMakeLists.txt` décrit le projet à CMake. Quatre lignes
+Le fichier `CMakeLists.txt` décrit le projet à CMake. Les lignes qui
 comptent :
 
 ```cmake
 cmake_minimum_required(VERSION 3.28)   # version minimale de CMake
 project(prg)                           # nom du projet
 set(CMAKE_CXX_STANDARD 20)             # standard C++ utilisé par le cours
+
+if(MSVC)                               # avertissements du compilateur
+    add_compile_options(/W4)
+else()
+    add_compile_options(-Wall -Wextra -Wpedantic -Wconversion)
+endif()
+
 add_executable(prg main.cpp)           # l'exécutable et ses fichiers source
 ```
+
+Le bloc `add_compile_options` active les avertissements du compilateur.
+Le [modèle complet](../ressources/index.qmd#cmakelists.txt) est dans les
+ressources.
 
 Quand vous ajoutez un fichier `.cpp` au projet, il doit apparaître dans
 `add_executable` ; CLion propose de le faire pour vous.
@@ -171,6 +232,7 @@ Vous êtes prêts pour le premier laboratoire quand chaque ligne passe :
 | Compte GitHub | vous pouvez vous connecter sur github.com |
 | CLion | le projet « Bonjour PRG » compile et s'exécute |
 | Débogueur | un point d'arrêt dans `main` arrête l'exécution |
+| SSH | `ssh -T git@github.com` vous salue par votre nom d'utilisateur |
 
 ## Sources
 

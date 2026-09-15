@@ -31,6 +31,8 @@ website:
             text: "Installation C++ et CLion"
           - href: guides/git.qmd
             text: "Git en pratique"
+          - href: guides/assertions.qmd
+            text: "Assertions et premiers tests"
       - href: ressources/index.qmd
         text: "Ressources"
 

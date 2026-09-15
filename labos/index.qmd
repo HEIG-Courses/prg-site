@@ -11,7 +11,9 @@ dépôt Git et sa date de rendu.
 
 Un laboratoire par semaine, lancé le mardi et poursuivi le vendredi avec
 les [exercices du recueil](../exercices/index.qmd). Les dates de rendu sont
-indiquées dans chaque assignment.
+indiquées dans chaque assignment ; le Labo 1 est à rendre le
+**dimanche 20.09**. Ce qui est sur GitHub à l'échéance est ce qui est
+corrigé.
 
 | Labo | Semaine | Début | Chapitres | Assignment |
 |---:|---:|---|---|---|
