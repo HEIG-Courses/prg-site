@@ -3,9 +3,10 @@ title: "Laboratoires"
 ---
 
 Les laboratoires sont rendus sur [Roster]({{< var roster-url >}}). Le lien
-d'inscription à la classe {{< var classe >}} est communiqué au premier cours.
-Chaque laboratoire est ensuite une *assignment* Roster avec son énoncé, son
-dépôt Git et sa date de rendu.
+d'inscription à la classe {{< var classe >}} vous est envoyé par e-mail.
+Une fois dans la classe, chaque laboratoire apparaît comme une
+*assignment* Roster avec son énoncé, son dépôt Git et sa date de rendu :
+la colonne Assignment du tableau renvoie donc simplement à Roster.
 
 ## Laboratoires
 
@@ -17,7 +18,7 @@ corrigé.
 
 | Labo | Semaine | Début | Chapitres | Assignment |
 |---:|---:|---|---|---|
-| 1 | 1 | Ma 15.09 | 1–2 | à venir |
+| 1 | 1 | Ma 15.09 | 1–2 | [Roster](https://roster.y-software.ch) |
 | 2 | 2 | Ma 22.09 | 2 | à venir |
 | 3 | 3 | Ma 29.09 | 2–3 | à venir |
 | 4 | 4 | Ma 06.10 | 3 | à venir |
