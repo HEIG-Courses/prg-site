@@ -100,18 +100,48 @@ Déjà installé avec la commande `apt` ci-dessus.
 
 :::
 
-Présentez-vous ensuite à Git (ces informations signent vos commits) :
+### Configuration de Git
+
+Git lit ses réglages dans le fichier `.gitconfig` de votre dossier
+personnel ; `git config --global` y écrit. Quatre réglages, une fois pour
+toutes :
 
 ```sh
 git config --global user.name "Prénom Nom"
 git config --global user.email "prenom.nom@heig-vd.ch"
+git config --global init.defaultBranch main
+git config --global pull.rebase true
 ```
+
+- `user.name` et `user.email` signent chacun de vos commits ; utilisez la
+  même adresse que sur votre compte GitHub.
+- `init.defaultBranch` nomme `main` la première branche d'un dépôt que vous
+  créez vous-même.
+- `pull.rebase` place vos commits après ceux de votre binôme lors d'un
+  `git pull`, voir [Git en pratique](git.qmd#tout-le-monde-sur-main-et-le-push-refusé).
+
+Après ces commandes, `~/.gitconfig` contient ceci, et vous pouvez aussi
+l'éditer directement :
+
+```ini
+[user]
+	name = Prénom Nom
+	email = prenom.nom@heig-vd.ch
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+```
+
+Sous Windows, l'installateur de Git règle aussi les fins de ligne
+(`core.autocrlf`) : gardez le choix proposé.
 
 Enfin, créez un [compte GitHub](https://github.com/signup) si vous n'en
 avez pas.
 
-**Vérification** : `git --version` affiche une version, `git config
-user.name` affiche votre nom, et vous pouvez vous connecter sur github.com.
+**Vérification** : `git --version` affiche une version,
+`git config --global --list` affiche les quatre réglages, et vous pouvez
+vous connecter sur github.com.
 
 ## Authentification SSH
 
@@ -228,7 +258,7 @@ Vous êtes prêts pour le premier laboratoire quand chaque ligne passe :
 | Vérification | Commande / action |
 |--------------|-------------------|
 | Compilateur et CMake | `g++ --version` et `cmake --version` (ou toolchain détectée dans CLion sous Windows) |
-| Git installé et configuré | `git --version` · `git config user.name` affiche votre nom |
+| Git installé et configuré | `git --version` · `git config --global --list` affiche nom, e-mail, `init.defaultbranch=main` et `pull.rebase=true` |
 | Compte GitHub | vous pouvez vous connecter sur github.com |
 | CLion | le projet « Bonjour PRG » compile et s'exécute |
 | Débogueur | un point d'arrêt dans `main` arrête l'exécution |

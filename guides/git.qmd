@@ -16,6 +16,16 @@ Un **dépôt** Git contient votre projet et tout son historique. Git est
 historique compris. Vous pouvez travailler et valider hors ligne, puis
 synchroniser plus tard. Par convention, la copie sur GitHub s'appelle le
 **remote** (`origin`) et la copie sur votre machine est votre dépôt local.
+Dans un binôme, il y a donc trois copies du dépôt. La première fois, chacun
+crée la sienne avec `git clone` :
+
+![](images/git-clone.svg){width="90%" fig-alt="GitHub en haut, deux ordinateurs qui clonent le dépôt"}
+
+Ensuite, chaque copie ne voit le travail des autres qu'au moment où on le
+lui envoie : `git push` envoie vos commits à GitHub, `git pull` récupère
+ceux de votre binôme.
+
+![](images/git-push-pull.svg){width="90%" fig-alt="GitHub en haut, deux ordinateurs qui poussent et tirent"}
 
 ### Commits, hachages et tags
 
@@ -25,17 +35,26 @@ du projet à un moment donné. Chaque commit a un **hachage** unique calculé
 son hachage, ce qui rend l'historique fiable. Un **tag** est un nom lisible
 donné à un commit, typiquement une version (`v1.0.0`).
 
-### Les trois zones
+### Les quatre zones
 
-Entre votre éditeur et l'historique, il y a trois endroits :
+Entre votre éditeur et GitHub, un changement passe par quatre endroits :
 
 1. Le **répertoire de travail** : les fichiers que vous éditez.
-2. L'**index** (staging area) : les changements que vous avez marqués pour
-   le prochain commit (`git add`).
-3. Le **dépôt** : l'historique validé (`git commit`).
+2. La **staging area** : les changements que vous avez marqués pour le
+   prochain commit (`git add`). Git l'appelle aussi *index* dans ses
+   messages.
+3. Le **dépôt local** : l'historique validé (`git commit`), sur votre
+   ordinateur.
+4. Le **dépôt distant** sur GitHub, qui ne reçoit vos commits qu'avec
+   `git push` et dont vous récupérez ceux de votre binôme avec `git pull`.
 
-`git status` montre où se trouve chaque changement, `git diff` montre ce
-qui a changé mais n'est pas encore dans l'index.
+![](images/git-zones.svg){width="100%" fig-alt="Répertoire de travail, staging area, dépôt local, dépôt distant, reliés par git add, git commit, git push et git pull"}
+
+**Un commit est local.** Tant que vous n'avez pas poussé, votre binôme ne
+voit rien et GitHub ne contient rien de votre travail : à l'échéance, seul
+ce qui a été poussé compte. `git status` montre où se trouve chaque
+changement, `git diff` montre ce qui a changé mais n'est pas encore dans
+la staging area.
 
 ### Branches
 
@@ -217,14 +236,16 @@ hint: Updates were rejected because the remote contains work that you do
 hint: not have locally.
 ```
 
-Rien n'est cassé : votre binôme a poussé sur `main` avant vous. La séquence
-de récupération :
+Rien n'est cassé : votre binôme a poussé sur `main` avant vous, et les deux
+copies ont divergé.
+
+![](images/git-divergence.svg){width="100%" fig-alt="Deux commits issus du même parent : celui du binôme sur origin/main, le vôtre sur main"}
+
+La séquence de récupération, grâce au réglage `pull.rebase` du
+[guide d'installation](installation.qmd#configuration-de-git), qui rejoue
+vos commits par-dessus les leurs :
 
 ```sh
-# Une fois pour toutes : rejouer vos commits par-dessus les leurs au pull
-git config --global pull.rebase true
-
-# Intégrer leur travail, puis pousser le vôtre
 git pull
 git push
 ```
@@ -275,6 +296,17 @@ pour les commandes de l'aide-mémoire.
 
 ## Pour aller plus loin
 
+::: {.callout-note collapse="true" title="Bonnes habitudes"}
+- `git pull` en début de séance, avant de toucher au code.
+- `git status` avant chaque commit, pour voir ce qui va partir.
+- Des commits petits et fréquents, avec un message qui dit ce qu'ils
+  apportent.
+- `git push` en fin de séance : un commit non poussé n'existe que sur votre
+  ordinateur.
+- Jamais de dossier de build ni de configuration d'IDE dans le dépôt : le
+  `.gitignore` s'en charge, ne le contournez pas.
+:::
+
 ::: {#rebase-squash .callout-note collapse="true" title="Merge, rebase et squash en ligne de commande"}
 Sur GitHub, les trois méthodes sont des boutons. En ligne de commande,
 tout dépend de la branche sur laquelle on se trouve : la commande agit
@@ -321,6 +353,8 @@ tout. Un bon défaut : un verbe à l'infinitif et une courte description
   interactifs, excellents pour branches, merges et rebases.
 - [Pro Git](https://git-scm.com/book/fr) : le livre de référence, gratuit,
   en français.
+- [Tutoriels Git d'Atlassian](https://www.atlassian.com/fr/git/tutorials) :
+  chaque commande illustrée d'un schéma.
 :::
 
 ## Sources

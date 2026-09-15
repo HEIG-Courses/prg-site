@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" font-family="system-ui, sans-serif" font-size="15">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#343a40"/>
+    </marker>
+  </defs>
+  <!-- machine / GitHub brackets -->
+  <rect x="14" y="60" width="606" height="150" rx="10" fill="#f8f9fa" stroke="#adb5bd" stroke-dasharray="6 4"/>
+  <text x="30" y="84" fill="#6c757d">Votre ordinateur</text>
+  <rect x="640" y="60" width="206" height="150" rx="10" fill="#f8f9fa" stroke="#adb5bd" stroke-dasharray="6 4"/>
+  <text x="656" y="84" fill="#6c757d">GitHub</text>
+  <!-- boxes -->
+  <g stroke="#343a40" stroke-width="1.5" fill="#ffffff">
+    <rect x="30" y="110" width="170" height="70" rx="6"/>
+    <rect x="230" y="110" width="170" height="70" rx="6"/>
+    <rect x="430" y="110" width="170" height="70" rx="6"/>
+    <rect x="658" y="110" width="170" height="70" rx="6"/>
+  </g>
+  <g fill="#212529" text-anchor="middle" font-weight="600">
+    <text x="115" y="140">Répertoire</text><text x="115" y="160">de travail</text>
+    <text x="315" y="150">Staging area</text>
+    <text x="515" y="150">Dépôt local</text>
+    <text x="743" y="140">Dépôt distant</text><text x="743" y="160">origin</text>
+  </g>
+  <!-- forward arrows -->
+  <g stroke="#343a40" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+    <line x1="200" y1="145" x2="228" y2="145"/>
+    <line x1="400" y1="145" x2="428" y2="145"/>
+    <line x1="600" y1="145" x2="656" y2="145"/>
+  </g>
+  <g fill="#212529" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14">
+    <text x="214" y="102">git add</text>
+    <text x="414" y="102">git commit</text>
+    <text x="628" y="102">git push</text>
+  </g>
+  <!-- pull back -->
+  <path d="M743,180 L743,250 L115,250 L115,182" stroke="#343a40" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <text x="430" y="272" fill="#212529" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14">git pull</text>
+  <text x="430" y="30" fill="#212529" text-anchor="middle">Un commit reste sur votre ordinateur tant que vous ne l'avez pas poussé.</text>
+</svg>

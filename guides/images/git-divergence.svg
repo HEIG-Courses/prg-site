@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 240" font-family="system-ui, sans-serif" font-size="15">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#343a40"/>
+    </marker>
+  </defs>
+  <g stroke="#343a40" stroke-width="1.5" fill="#ffffff">
+    <circle cx="120" cy="120" r="22"/>
+    <circle cx="320" cy="120" r="22"/>
+    <circle cx="520" cy="60" r="22"/>
+    <circle cx="520" cy="180" r="22"/>
+  </g>
+  <g fill="#212529" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15">
+    <text x="120" y="125">A</text><text x="320" y="125">B</text><text x="520" y="65">C</text><text x="520" y="185">D</text>
+  </g>
+  <g stroke="#343a40" stroke-width="1.5" fill="none" marker-end="url(#ar)">
+    <line x1="298" y1="120" x2="144" y2="120"/>
+    <line x1="500" y1="70" x2="342" y2="112"/>
+    <line x1="500" y1="170" x2="342" y2="128"/>
+  </g>
+  <g fill="#212529">
+    <text x="560" y="65">origin/main : le commit de votre binôme</text>
+    <text x="560" y="185">main : votre commit, encore local</text>
+  </g>
+  <text x="430" y="230" fill="#212529" text-anchor="middle">Push refusé : origin contient C, que vous n'avez pas. git pull, puis git push.</text>
+</svg>
