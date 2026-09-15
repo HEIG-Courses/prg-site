@@ -1,40 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" font-family="system-ui, sans-serif" font-size="15">
-  <defs>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#343a40"/>
-    </marker>
-  </defs>
-  <!-- machine / GitHub brackets -->
-  <rect x="14" y="60" width="606" height="150" rx="10" fill="#f8f9fa" stroke="#adb5bd" stroke-dasharray="6 4"/>
-  <text x="30" y="84" fill="#6c757d">Votre ordinateur</text>
-  <rect x="640" y="60" width="206" height="150" rx="10" fill="#f8f9fa" stroke="#adb5bd" stroke-dasharray="6 4"/>
-  <text x="656" y="84" fill="#6c757d">GitHub</text>
-  <!-- boxes -->
-  <g stroke="#343a40" stroke-width="1.5" fill="#ffffff">
-    <rect x="30" y="110" width="170" height="70" rx="6"/>
-    <rect x="230" y="110" width="170" height="70" rx="6"/>
-    <rect x="430" y="110" width="170" height="70" rx="6"/>
-    <rect x="658" y="110" width="170" height="70" rx="6"/>
-  </g>
-  <g fill="#212529" text-anchor="middle" font-weight="600">
-    <text x="115" y="140">Répertoire</text><text x="115" y="160">de travail</text>
-    <text x="315" y="150">Staging area</text>
-    <text x="515" y="150">Dépôt local</text>
-    <text x="743" y="140">Dépôt distant</text><text x="743" y="160">origin</text>
-  </g>
-  <!-- forward arrows -->
-  <g stroke="#343a40" stroke-width="1.5" fill="none" marker-end="url(#ar)">
-    <line x1="200" y1="145" x2="228" y2="145"/>
-    <line x1="400" y1="145" x2="428" y2="145"/>
-    <line x1="600" y1="145" x2="656" y2="145"/>
-  </g>
-  <g fill="#212529" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14">
-    <text x="214" y="102">git add</text>
-    <text x="414" y="102">git commit</text>
-    <text x="628" y="102">git push</text>
-  </g>
-  <!-- pull back -->
-  <path d="M743,180 L743,250 L115,250 L115,182" stroke="#343a40" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
-  <text x="430" y="272" fill="#212529" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14">git pull</text>
-  <text x="430" y="30" fill="#212529" text-anchor="middle">Un commit reste sur votre ordinateur tant que vous ne l'avez pas poussé.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 290" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15">
+<defs>
+<marker id="arB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6fd6"/></marker>
+<marker id="arG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2eaa6a"/></marker>
+<marker id="arO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef8f2c"/></marker>
+</defs>
+<rect x="14" y="60" width="606" height="150" rx="12" fill="#eef3fc" stroke="#6f97dd" stroke-dasharray="7 5"/>
+<text x="30" y="84" fill="#2f58ab" font-weight="600">Votre ordinateur</text>
+<rect x="640" y="60" width="206" height="150" rx="12" fill="#eaf7f0" stroke="#5fc292" stroke-dasharray="7 5"/>
+<text x="656" y="84" fill="#24895a" font-weight="600">GitHub</text>
+<rect x="30" y="110" width="170" height="70" rx="8" fill="#ffffff" stroke="#6f97dd" stroke-width="2"/>
+<text x="115" y="140" fill="#212529" text-anchor="middle" font-weight="700">Répertoire</text><text x="115" y="160" fill="#212529" text-anchor="middle" font-weight="700">de travail</text>
+<rect x="230" y="110" width="170" height="70" rx="8" fill="#ffffff" stroke="#6f97dd" stroke-width="2"/>
+<text x="315" y="140" fill="#212529" text-anchor="middle" font-weight="700">Staging</text><text x="315" y="160" fill="#212529" text-anchor="middle" font-weight="700">area</text>
+<rect x="430" y="110" width="170" height="70" rx="8" fill="#ffffff" stroke="#6f97dd" stroke-width="2"/>
+<text x="515" y="140" fill="#212529" text-anchor="middle" font-weight="700">Dépôt</text><text x="515" y="160" fill="#212529" text-anchor="middle" font-weight="700">local</text>
+<rect x="658" y="110" width="170" height="70" rx="8" fill="#ffffff" stroke="#5fc292" stroke-width="2"/>
+<text x="743" y="140" fill="#212529" text-anchor="middle" font-weight="700">Dépôt distant</text><text x="743" y="160" fill="#212529" text-anchor="middle" font-weight="700">origin</text>
+<line x1="200" y1="145" x2="228" y2="145" stroke="#3b6fd6" stroke-width="3" marker-end="url(#arB)"/>
+<line x1="400" y1="145" x2="428" y2="145" stroke="#3b6fd6" stroke-width="3" marker-end="url(#arB)"/>
+<line x1="600" y1="145" x2="656" y2="145" stroke="#2eaa6a" stroke-width="3" marker-end="url(#arG)"/>
+<rect x="174" y="86" width="80" height="24" rx="6" fill="#f1f3f5" stroke="#ced4da"/>
+<text x="214" y="103" fill="#212529" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">git add</text>
+<rect x="361" y="86" width="106" height="24" rx="6" fill="#f1f3f5" stroke="#ced4da"/>
+<text x="414" y="103" fill="#212529" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">git commit</text>
+<rect x="584" y="86" width="89" height="24" rx="6" fill="#f1f3f5" stroke="#ced4da"/>
+<text x="628" y="103" fill="#212529" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">git push</text>
+<path d="M743,180 L743,250 L115,250 L115,184" stroke="#2eaa6a" stroke-width="3" fill="none" marker-end="url(#arG)"/>
+<rect x="386" y="238" width="89" height="24" rx="6" fill="#f1f3f5" stroke="#ced4da"/>
+<text x="430" y="255" fill="#212529" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">git pull</text>
+<text x="430" y="30" fill="#212529" text-anchor="middle" font-size="15">Un commit reste sur votre ordinateur tant que vous ne l'avez pas poussé.</text>
 </svg>

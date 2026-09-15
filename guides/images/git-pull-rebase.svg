@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 260" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15">
+<line x1="320" y1="120" x2="520" y2="190" stroke="#ced4da" stroke-width="5" stroke-linecap="round" stroke-dasharray="7 6"/>
+<line x1="120" y1="120" x2="520" y2="120" stroke="#a9c4f2" stroke-width="5" stroke-linecap="round"/>
+<line x1="520" y1="120" x2="700" y2="120" stroke="#f8cf9b" stroke-width="5" stroke-linecap="round"/>
+<circle cx="120" cy="120" r="22" fill="#a9c4f2" stroke="#6f97dd" stroke-width="2"/><text x="120" y="126" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">A</text>
+<circle cx="320" cy="120" r="22" fill="#a9c4f2" stroke="#6f97dd" stroke-width="2"/><text x="320" y="126" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">B</text>
+<circle cx="520" cy="120" r="22" fill="#a8e2c4" stroke="#5fc292" stroke-width="2"/><text x="520" y="126" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">C</text>
+<circle cx="700" cy="120" r="22" fill="#f8cf9b" stroke="#e5a552" stroke-width="2"/><text x="700" y="126" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">D'</text>
+<circle cx="520" cy="190" r="22" fill="#ced4da" stroke="#adb5bd" stroke-width="2"/><text x="520" y="196" fill="#6c757d" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">D</text>
+<rect x="465" y="47" width="110" height="26" rx="13" fill="#a8e2c4"/><text x="520" y="65" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">origin/main</text>
+<rect x="671" y="47" width="58" height="26" rx="13" fill="#a9c4f2"/><text x="700" y="65" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">main</text>
+<text x="600" y="235" fill="#6c757d" text-anchor="middle" font-size="14">avant : votre D partait de B</text>
+<text x="430" y="22" fill="#212529" text-anchor="middle" font-size="15">Après git pull : votre commit D est rejoué après C et devient D'. git push envoie D' et origin/main avance jusqu'à lui.</text>
+</svg>

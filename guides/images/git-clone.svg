@@ -1,32 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" font-family="system-ui, sans-serif" font-size="15">
-  <defs>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#343a40"/>
-    </marker>
-  </defs>
-  <g stroke="#343a40" stroke-width="1.5" fill="#ffffff">
-    <rect x="320" y="20" width="220" height="90" rx="8"/>
-    <rect x="40" y="220" width="260" height="90" rx="8"/>
-    <rect x="560" y="220" width="260" height="90" rx="8"/>
-  </g>
-  <g fill="#212529" text-anchor="middle">
-    <text x="430" y="50" font-weight="600">GitHub (origin)</text>
-    <text x="430" y="74">dépôt du groupe</text>
-    <text x="430" y="94">historique complet</text>
-    <text x="170" y="250" font-weight="600">Vous</text>
-    <text x="690" y="250" font-weight="600">Votre binôme</text>
-    <text x="170" y="274">copie complète du dépôt</text>
-    <text x="170" y="294">historique + fichiers</text>
-    <text x="690" y="274">copie complète du dépôt</text>
-    <text x="690" y="294">historique + fichiers</text>
-  </g>
-  <g stroke="#343a40" stroke-width="1.5" fill="none" marker-end="url(#ar)">
-    <line x1="365" y1="112" x2="170" y2="218"/>
-    <line x1="495" y1="112" x2="690" y2="218"/>
-  </g>
-  <g fill="#212529" font-family="ui-monospace, monospace" font-size="14">
-    <text x="205" y="160" text-anchor="end">git clone</text>
-    <text x="655" y="160">git clone</text>
-  </g>
-  <text x="430" y="180" fill="#6c757d" text-anchor="middle" font-size="14">une fois, sur chaque ordinateur</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15">
+<defs>
+<marker id="arB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6fd6"/></marker>
+<marker id="arG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2eaa6a"/></marker>
+<marker id="arO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef8f2c"/></marker>
+</defs>
+<rect x="320" y="20" width="220" height="90" rx="10" fill="#eaf7f0" stroke="#5fc292" stroke-width="2"/>
+<text x="430" y="50" fill="#212529" text-anchor="middle" font-weight="700">GitHub (origin)</text><text x="430" y="74" fill="#212529" text-anchor="middle">dépôt du groupe</text><text x="430" y="94" fill="#212529" text-anchor="middle">historique complet</text>
+<rect x="40" y="220" width="260" height="90" rx="10" fill="#eef3fc" stroke="#6f97dd" stroke-width="2"/>
+<text x="170" y="250" fill="#212529" text-anchor="middle" font-weight="700">Vous</text>
+<rect x="560" y="220" width="260" height="90" rx="10" fill="#eef3fc" stroke="#6f97dd" stroke-width="2"/>
+<text x="690" y="250" fill="#212529" text-anchor="middle" font-weight="700">Votre binôme</text>
+<text x="170" y="274" fill="#212529" text-anchor="middle">copie complète du dépôt</text><text x="170" y="294" fill="#212529" text-anchor="middle">historique + fichiers</text>
+<text x="690" y="274" fill="#212529" text-anchor="middle">copie complète du dépôt</text><text x="690" y="294" fill="#212529" text-anchor="middle">historique + fichiers</text>
+<line x1="365" y1="112" x2="170" y2="216" stroke="#2eaa6a" stroke-width="3" marker-end="url(#arG)"/>
+<line x1="495" y1="112" x2="690" y2="216" stroke="#2eaa6a" stroke-width="3" marker-end="url(#arG)"/>
+<rect x="118" y="148" width="97" height="24" rx="6" fill="#f1f3f5" stroke="#ced4da"/>
+<text x="166" y="165" fill="#212529" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">git clone</text>
+<rect x="645" y="148" width="97" height="24" rx="6" fill="#f1f3f5" stroke="#ced4da"/>
+<text x="694" y="165" fill="#212529" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">git clone</text>
+<text x="430" y="180" fill="#6c757d" text-anchor="middle" font-size="14">une fois, sur chaque ordinateur</text>
 </svg>

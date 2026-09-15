@@ -64,10 +64,18 @@ pointeur). C'est pourquoi on développe une fonctionnalité ainsi : partir
 de `main`, commiter sur la branche, fusionner quand c'est prêt.
 `HEAD` est le pointeur vers l'endroit où vous vous trouvez.
 
+![](images/git-branche.svg){width="100%" fig-alt="Une branche qui part du dernier commit de main avec deux commits à elle"}
+
 ### Fusion
 
 Ramener le travail d'une branche dans `main` se fait par un **merge** : Git
-combine les deux branches dans un *commit de fusion*.
+combine les deux branches dans un *commit de fusion*. Ce commit a deux
+parents : le dernier commit de `main` et le dernier commit de la branche.
+Avec **Squash and merge** sur GitHub, il n'y a pas de commit de fusion :
+`main` reçoit un seul nouveau commit, avec un seul parent, comme si vous
+l'aviez fait directement sur `main`.
+
+![](images/git-merge.svg){width="100%" fig-alt="Un commit de fusion M avec deux parents, le dernier commit de main et celui de la branche"}
 
 ### Conflits
 
@@ -210,7 +218,9 @@ Le déroulement complet :
    en un seul commit. Le cours
    utilise **Squash and merge** : un commit par fonctionnalité dans
    `main`, historique facile à lire. Choisissez-le, gardez ou corrigez le
-   message proposé, confirmez.
+   message proposé, confirmez. Ne cherchez pas de commit de fusion dans
+   l'historique : avec le squash, il n'y en a pas, `main` reçoit un seul
+   nouveau commit.
 
 8. Cliquez **Delete branch** : vous n'avez plus besoin de la branche.
 
@@ -252,6 +262,8 @@ vos commits après les leurs :
 git pull
 git push
 ```
+
+![](images/git-pull-rebase.svg){width="100%" fig-alt="Après le pull, votre commit est rejoué après celui du binôme, sur une seule ligne, prêt à être poussé"}
 
 Si vos changements et les leurs touchent les mêmes lignes, le pull s'arrête
 sur un conflit : résolvez les fichiers marqués (voir
@@ -335,6 +347,8 @@ git checkout main
 git merge <nom-de-branche>
 ```
 
+![](images/git-rebase.svg){width="100%" fig-alt="Les commits de la branche rejoués après le dernier commit de main, l'historique est une ligne"}
+
 **Squash** : depuis `main`, on ramène tous les commits de la branche en un
 seul, qu'il reste à commiter.
 
@@ -343,6 +357,8 @@ git checkout main
 git merge --squash <nom-de-branche>
 git commit -m "<ce que la branche apporte>"
 ```
+
+![](images/git-squash.svg){width="100%" fig-alt="Un seul commit S sur main qui réunit les commits de la branche"}
 :::
 
 ::: {.callout-note collapse="true" title="Messages de commit"}

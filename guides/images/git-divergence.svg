@@ -1,26 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 240" font-family="system-ui, sans-serif" font-size="15">
-  <defs>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#343a40"/>
-    </marker>
-  </defs>
-  <g stroke="#343a40" stroke-width="1.5" fill="#ffffff">
-    <circle cx="120" cy="120" r="22"/>
-    <circle cx="320" cy="120" r="22"/>
-    <circle cx="520" cy="60" r="22"/>
-    <circle cx="520" cy="180" r="22"/>
-  </g>
-  <g fill="#212529" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15">
-    <text x="120" y="125">A</text><text x="320" y="125">B</text><text x="520" y="65">C</text><text x="520" y="185">D</text>
-  </g>
-  <g stroke="#343a40" stroke-width="1.5" fill="none" marker-end="url(#ar)">
-    <line x1="298" y1="120" x2="144" y2="120"/>
-    <line x1="500" y1="70" x2="342" y2="112"/>
-    <line x1="500" y1="170" x2="342" y2="128"/>
-  </g>
-  <g fill="#212529">
-    <text x="560" y="65">origin/main : le commit de votre binôme</text>
-    <text x="560" y="185">main : votre commit, encore local</text>
-  </g>
-  <text x="430" y="230" fill="#212529" text-anchor="middle">Push refusé : origin contient C, que vous n'avez pas. git pull, puis git push.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 265" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15">
+<defs>
+<marker id="arB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6fd6"/></marker>
+<marker id="arG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2eaa6a"/></marker>
+<marker id="arO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef8f2c"/></marker>
+</defs>
+<line x1="120" y1="120" x2="320" y2="120" stroke="#a9c4f2" stroke-width="5" stroke-linecap="round"/>
+<line x1="320" y1="120" x2="520" y2="60" stroke="#a8e2c4" stroke-width="5" stroke-linecap="round"/>
+<line x1="320" y1="120" x2="520" y2="180" stroke="#f8cf9b" stroke-width="5" stroke-linecap="round"/>
+<circle cx="120" cy="120" r="22" fill="#a9c4f2" stroke="#6f97dd" stroke-width="2"/>
+<text x="120" y="126" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">A</text>
+<circle cx="320" cy="120" r="22" fill="#a9c4f2" stroke="#6f97dd" stroke-width="2"/>
+<text x="320" y="126" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">B</text>
+<circle cx="520" cy="60" r="22" fill="#a8e2c4" stroke="#5fc292" stroke-width="2"/>
+<text x="520" y="66" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">C</text>
+<circle cx="520" cy="180" r="22" fill="#f8cf9b" stroke="#e5a552" stroke-width="2"/>
+<text x="520" y="186" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">D</text>
+<rect x="565" y="47" width="121" height="26" rx="13" fill="#a8e2c4"/>
+<text x="625" y="65" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">origin/main</text>
+<text x="565" y="92" fill="#6c757d" text-anchor="start" font-size="14">le commit de votre binôme, déjà poussé</text>
+<rect x="565" y="167" width="58" height="26" rx="13" fill="#a9c4f2"/>
+<text x="594" y="185" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">main</text>
+<text x="565" y="212" fill="#6c757d" text-anchor="start" font-size="14">votre commit, encore local</text>
+<text x="430" y="250" fill="#212529" text-anchor="middle" font-size="15">Push refusé : origin contient C, que vous n'avez pas. git pull, puis git push.</text>
 </svg>

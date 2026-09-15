@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 270" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15">
+<defs>
+<marker id="arB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b6fd6"/></marker>
+<marker id="arG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2eaa6a"/></marker>
+<marker id="arO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef8f2c"/></marker>
+</defs>
+<line x1="400" y1="110" x2="540" y2="190" stroke="#ced4da" stroke-width="5" stroke-linecap="round" stroke-dasharray="7 6"/>
+<line x1="540" y1="190" x2="680" y2="190" stroke="#ced4da" stroke-width="5" stroke-linecap="round" stroke-dasharray="7 6"/>
+<line x1="120" y1="110" x2="540" y2="110" stroke="#a9c4f2" stroke-width="5" stroke-linecap="round"/>
+<line x1="540" y1="110" x2="800" y2="110" stroke="#f8cf9b" stroke-width="5" stroke-linecap="round"/>
+<circle cx="120" cy="110" r="22" fill="#a9c4f2" stroke="#6f97dd" stroke-width="2"/>
+<text x="120" y="116" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">A</text>
+<circle cx="260" cy="110" r="22" fill="#a9c4f2" stroke="#6f97dd" stroke-width="2"/>
+<text x="260" y="116" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">B</text>
+<circle cx="400" cy="110" r="22" fill="#a9c4f2" stroke="#6f97dd" stroke-width="2"/>
+<text x="400" y="116" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">C</text>
+<circle cx="540" cy="110" r="22" fill="#a9c4f2" stroke="#6f97dd" stroke-width="2"/>
+<text x="540" y="116" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">F</text>
+<circle cx="680" cy="110" r="22" fill="#f8cf9b" stroke="#e5a552" stroke-width="2"/>
+<text x="680" y="116" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">D'</text>
+<circle cx="800" cy="110" r="22" fill="#f8cf9b" stroke="#e5a552" stroke-width="2"/>
+<text x="800" y="116" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">E'</text>
+<circle cx="540" cy="190" r="22" fill="#ced4da" stroke="#adb5bd" stroke-width="2"/>
+<text x="540" y="196" fill="#6c757d" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">D</text>
+<circle cx="680" cy="190" r="22" fill="#ced4da" stroke="#adb5bd" stroke-width="2"/>
+<text x="680" y="196" fill="#6c757d" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">E</text>
+<rect x="511" y="47" width="58" height="26" rx="13" fill="#a9c4f2"/>
+<text x="540" y="65" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">main</text>
+<rect x="675" y="47" width="170" height="26" rx="13" fill="#f8cf9b"/>
+<text x="760" y="65" fill="#1f2933" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="600">&lt;nom-de-branche&gt;</text>
+<text x="610" y="240" fill="#6c757d" text-anchor="middle" font-size="14">avant : D et E partaient de C</text>
+<text x="430" y="22" fill="#212529" text-anchor="middle" font-size="15">git rebase main : D et E sont rejoués après F et deviennent D' et E'. L'historique reste une ligne.</text>
+</svg>
