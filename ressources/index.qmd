@@ -59,23 +59,17 @@ add_executable(${PROJECT_NAME}
 // Date        ...
 //
 // But         description détaillée du projet
-//
-// Remarque
-//
-// Modifs      Date / Auteur / Raison
-//
-// Compilateur
 ```
 
 ### En-tête de fonction
+Il est possible de générer automatiquement la structure ci-dessous en écrivant "/**" sur la ligne au dessus de la déclaration de la fonction et en appuyant sur entrée.
 
 ```cpp
-// nom         saisie
-// but         fonction de saisie
-//             la saisie est contrôlée
-// param       MSG_INVITE  message d'invite
-// param       MIN         intervalle de saisie, valeur min comprise
-// param       MAX         intervalle de saisie, valeur max comprise
-// return      valeur saisie
-// exception   n/a
+/**
+ * Description de la fonction
+ * @param number
+ * @param number2
+ * @return
+ * @exception
+ */
 ```
