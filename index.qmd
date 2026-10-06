@@ -19,7 +19,7 @@ réservée à la préparation et aux évaluations
 | 2 | *Jeûne fédéral* | 22.09 · [Ch. 2](slides/02-types-references-arithmetique.pdf) (2/3) *(cours à la place du labo)* | 23.09 · Lancement [Labo 2](labos/index.qmd) *(labo à la place du cours)* | 25.09 · Labo 2 · exercices ch. 2 |  |
 | 3 | 28.09 · Ch. 2 (3/3) · [Ch. 3 Conditions et boucles](slides/03-conditions-et-boucles.pdf) (1/3) | 29.09 · Ch. 3 (2/3) *(cours à la place du labo)* | 30.09 · Ch. 3 (3/3) · exercices ch. 3 | 02.10 · Exercices ch. 3 |  |
 | 4 | 05.10 · [Ch. 4 Fonctions, récursivité, surcharge](slides/04-fonctions-recursivite-surcharge.pdf) (1/3) | 06.10 · Lancement [Labo 3](labos/index.qmd) | 07.10 · Ch. 4 (2/3) | 09.10 · [Labo 3](labos/index.qmd) · exercices ch. 3-4 |  |
-| 5 | 12.10 · Ch. 4 (3/3) | 13.10 · Lancement [Labo 4](labos/index.qmd) | 14.10 · Exercices ch. 4 et rattrapage | 16.10 · Labo 4 · exercices ch. 4 |  |
+| 5 | 12.10 · Ch. 4 (3/3) | 13.10 · Lancement [Labo 4](labos/index.qmd) | 14.10 · Exercices ch. 4 et rattrapage | 16.10 · Labo 4 · exercices ch. 4 | **Ma 13.10, 16h00** rendu Labo 3 |
 | - | *Semaine spéciale (19.10 - 23.10), travail personnel* | | | | |
 | 6 | 26.10 · Exercices ch. 4 et rattrapage | 27.10 · Lancement [Labo 5](labos/index.qmd) | 28.10 · Ch. 5 Arrays, vector, string (1/5) | 30.10 · Labo 5 · exercices ch. 4-5 |  |
 | 7 | 02.11 · Ch. 5 (2/5) | 03.11 · Lancement [Labo 6](labos/index.qmd) | 04.11 · Ch. 5 (3/5) | 06.11 · Labo 6 · exercices ch. 5 |  |
