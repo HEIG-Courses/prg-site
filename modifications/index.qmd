@@ -1,0 +1,44 @@
+---
+title: "Modifications"
+---
+
+Ce que change chaque version des slides. La version est indiquée dans le lien du
+PDF sur la page [Matériel de cours](../materiel/index.qmd), par exemple « PDF (v1.3) ».
+
+## Chapitre 4 - Fonctions, récursivité, surcharge
+
+### v1.1 (07.10)
+
+| Slide | Type | Changement |
+|---:|:---|:---|
+| 33 | Clarification | Usages du retour par référence. |
+| 41 | Correction | Erreur de compilation affichée au lieu du résultat. |
+
+## Chapitre 2 - Types, références, arithmétique
+
+### v1.3 (28.09)
+
+| Slide | Type | Changement |
+|---:|:---|:---|
+| 65 | Correction | Comparaisons avec NaN, textes du pptx rétablis. |
+| 67 | Correction | Mise en page du code. |
+| 75 | Correction | Note sur le comportement indéfini avant C++20. |
+
+### v1.2 (22.09)
+
+| Slide | Type | Changement |
+|---:|:---|:---|
+| 1 | Correction | Lien de vote des quiz rétabli dans le PDF. |
+
+### v1.1 (22.09)
+
+| Slide | Type | Changement |
+|---:|:---|:---|
+| 49 | Clarification | `int` optionnel dans `short int`, `long int`, `long long int`. |
+| 56 | Clarification | `unsigned` seul est le même type que `unsigned int`. |
+| 57 | Clarification | Types écrits en toutes lettres dans les exemples. |
+| 58 | Clarification | Dépassement signé ou non signé, nouvelle slide. |
+| 62 | Clarification | Forme normalisée de la mantisse. |
+| 63 | Clarification | Biais de l'exposant. |
+| 64 | Clarification | Codage d'un `float`, nouvelle slide. |
+| 70 | Clarification | Point ou exposant pour un littéral réel. |
