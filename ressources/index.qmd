@@ -6,6 +6,7 @@ title: "Ressources"
 
 - [Fiche d'unité PRG 2026-2027](fiche_unite_PRG_2026.pdf) : objectifs, contenu, évaluation.
 - [Utilisation responsable de l'IA en PRG1](IA%20-%20Utilisation%20responsable%20-%20PRG1.pdf).
+- [Référence C++ (v. 25.10.2026)](PRG%20-%20reference%20Cpp%20-%202026-10-25.pdf) : aide-mémoire de la syntaxe et de la bibliothèque standard. Une copie vous sera fournie aux évaluations.
 
 ## C++
 
