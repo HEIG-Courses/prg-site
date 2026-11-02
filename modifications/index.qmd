@@ -7,6 +7,15 @@ PDF sur la page [Matériel de cours](../materiel/index.qmd), par exemple « PDF 
 
 ## Chapitre 5 - Arrays, vector, string
 
+### v1.2 (02.11)
+
+| Slide | Type | Changement |
+|---:|:---|:---|
+| 40 | Correction | Table ISO-8859-1 : titre, lignes 0x à 7x pour l'ASCII, lignes 8x et 9x indiquées comme codes de contrôle. |
+| 51 | Clarification | Initialisation avec un constructeur, en plus de `=`. |
+| 53, 56-60, 62 | Clarification | Chaînes initialisées avec `=`. |
+| 62 | Clarification | `find` avec 3 paramètres et `replace` expliqués. |
+
 ### v1.1 (02.11)
 
 | Slide | Type | Changement |
