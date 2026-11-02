@@ -5,6 +5,15 @@ title: "Modifications"
 Ce que change chaque version des slides. La version est indiquée dans le lien du
 PDF sur la page [Matériel de cours](../materiel/index.qmd), par exemple « PDF (v1.3) ».
 
+## Chapitre 5 - Arrays, vector, string
+
+### v1.1 (02.11)
+
+| Slide | Type | Changement |
+|---:|:---|:---|
+| 39 | Clarification | Sens de « modificateur », en note de bas de slide. |
+| 51 | Clarification | Une seule forme d'initialisation : `string s = expression;`. |
+
 ## Chapitre 4 - Fonctions, récursivité, surcharge
 
 ### v1.1 (07.10)
