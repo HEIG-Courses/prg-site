@@ -25,6 +25,12 @@ PDF sur la page [Matériel de cours](../materiel/index.qmd), par exemple « PDF 
 
 ## Chapitre 4 - Fonctions, récursivité, surcharge
 
+### v1.2 (09.11)
+
+| Slide | Type | Changement |
+|---:|:---|:---|
+| 68 | Retrait | Règle F.60 (préférer `T*` à `T&`) retirée des Cpp Core Guidelines. |
+
 ### v1.1 (07.10)
 
 | Slide | Type | Changement |
