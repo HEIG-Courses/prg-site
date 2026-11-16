@@ -24,7 +24,7 @@ réservée à la préparation et aux évaluations
 | 6 | 26.10 · Ch. 5 (2/4) | 27.10 · Lancement [Labo 4](labos/index.qmd) | 28.10 · Ch. 5 (3/4) | 30.10 · Labo 4 · exercices ch. 5 |  |
 | 7 | 02.11 · Ch. 5 (4/4) · Révisions | 03.11 · Révisions | 04.11 · Révisions | 06.11 · Révisions | **Lu 02.11, 23h59** rendu Labo 4 (non noté) |
 | 8 | **Semaine d'évaluation (09.11 - 13.11) : examen intermédiaire** | | | 13.11 · [Ch. 6 Gestion des erreurs](slides/06-gestion-des-erreurs.pdf) (1/1) *(cours à la place du labo)* | |
-| 9 | 16.11 · Ch. 7 Flux et fichiers (1/3) | 17.11 · Lancement [Labo 5](labos/index.qmd) | 18.11 · Ch. 7 (2/3) | 20.11 · Labo 5 · exercices ch. 5 |  |
+| 9 | 16.11 · [Ch. 7 Flux et fichiers](slides/07-flux-et-fichiers.pdf) (1/3) | 17.11 · Lancement [Labo 5](labos/index.qmd) | 18.11 · Ch. 7 (2/3) | 20.11 · Labo 5 · exercices ch. 5 |  |
 | 10 | 23.11 · Ch. 7 (3/3) | 24.11 · Lancement [Labo 6](labos/index.qmd) | 25.11 · Ch. 8 Enum, struct, classes, surcharge d'opérateurs (1/4) | 27.11 · Labo 6 · exercices ch. 6-7 |  |
 | 11 | 30.11 · Ch. 8 (2/4) | 01.12 · Lancement [Labo 7](labos/index.qmd) | 02.12 · Ch. 8 (3/4) | 04.12 · Labo 7 · exercices ch. 7 |  |
 | 12 | 07.12 · Ch. 8 (4/4) | 08.12 · Lancement [Labo 8](labos/index.qmd) | 09.12 · Ch. 9 Allocation dynamique, pointeurs (1/3) | 11.12 · Labo 8 · exercices ch. 8 |  |
