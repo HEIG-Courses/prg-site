@@ -5,6 +5,17 @@ title: "Modifications"
 Ce que change chaque version des slides. La version est indiquée dans le lien du
 PDF sur la page [Matériel de cours](../materiel/index.qmd), par exemple « PDF (v1.3) ».
 
+## Chapitre 8 - Enum, struct, classes, surcharge d'opérateurs
+
+### v1.1 (23.11)
+
+| Slide | Type | Changement |
+|---:|:---|:---|
+| 45 | Clarification | Le texte précise de quelle classe on parle : un seul constructeur, à trois paramètres. |
+| 49 | Clarification | Table des moments de création et de destruction d'un objet. |
+| 58 | Clarification | `operator=`, `operator[]` : le langage impose une fonction membre. |
+| 63 | Clarification | Headers à inclure dans le fichier client, avec un exemple. |
+
 ## Chapitre 5 - Arrays, vector, string
 
 ### v1.2 (02.11)
