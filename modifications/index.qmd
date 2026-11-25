@@ -7,6 +7,19 @@ PDF sur la page [Matériel de cours](../materiel/index.qmd), par exemple « PDF 
 
 ## Chapitre 8 - Enum, struct, classes, surcharge d'opérateurs
 
+### v1.2 (25.11)
+
+Deux slides ajoutées : les numéros augmentent de 1 après la slide 51 et de 2 après la slide 53.
+
+| Slide | Type | Changement |
+|---:|:---|:---|
+| 51 | Ajout | Surcharge par fonction externe : forme générale, opérateurs binaire et unaire, appel fait par le compilateur. |
+| 52 | Clarification | Ancienne slide 51 : l'exemple `operator<` seul. |
+| 53 | Ajout | Surcharge par fonction membre : forme générale et appel fait par le compilateur. |
+| 54 | Clarification | Ancienne slide 52 : l'exemple `operator<`, et les cas où il faut une fonction externe. |
+| 55 | Clarification | Puces réorganisées en sous-listes. |
+| 57 | Clarification | `operator[]` : exemple d'appel sur un objet constant et sur un objet non constant. |
+
 ### v1.1 (23.11)
 
 | Slide | Type | Changement |

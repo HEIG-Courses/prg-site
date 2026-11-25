@@ -16,7 +16,7 @@ semaine.
 | 5 | Arrays, vector, string | [PDF (v1.2)](../slides/05-arrays-vector-string.pdf) |
 | 6 | Gestion des erreurs | [PDF (v1.0)](../slides/06-gestion-des-erreurs.pdf) |
 | 7 | Flux et fichiers | [PDF (v1.0)](../slides/07-flux-et-fichiers.pdf) |
-| 8 | Enum, struct, classes, surcharge d'opérateurs | [PDF (v1.1)](../slides/08-enum-struct-classes-surcharge.pdf) |
+| 8 | Enum, struct, classes, surcharge d'opérateurs | [PDF (v1.2)](../slides/08-enum-struct-classes-surcharge.pdf) |
 | 9 | Allocation dynamique, pointeurs | [PDF](../slides/09-allocation-dynamique-pointeurs.pdf) |
 
 ## Références
